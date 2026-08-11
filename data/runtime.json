@@ -1,0 +1,986 @@
+{
+  "users": [
+    {
+      "id": "USR-10001",
+      "name": "Mahesh Kumar",
+      "email": "gamer@maheshgamespace.local",
+      "passwordHash": "$2a$10$VLulJNMeuUzzp.j0rJhPIOgbWCWHf7rKgT928KI20xb42ShXSgzmO",
+      "role": "customer",
+      "status": "active",
+      "createdAt": "2026-07-12T17:17:36.119Z",
+      "updatedAt": "2026-08-11T17:23:05.376Z",
+      "lastLoginAt": "2026-08-11T17:23:05.376Z",
+      "phone": "+91 98765 43210"
+    },
+    {
+      "id": "USR-10002",
+      "name": "Admin Director",
+      "email": "admin@maheshgamespace.local",
+      "passwordHash": "$2a$10$h0Ldiujt9P42vVUCCT8TguSdb10MNsQT0GeiuNrPpxyAMLwyRho32",
+      "role": "admin",
+      "status": "active",
+      "createdAt": "2026-05-13T17:17:36.119Z",
+      "updatedAt": "2026-08-11T17:17:36.525Z",
+      "lastLoginAt": "2026-08-11T17:17:36.525Z",
+      "phone": "+91 99999 88888"
+    },
+    {
+      "id": "USR-10003",
+      "name": "Aarav Sharma",
+      "email": "aarav@example.com",
+      "passwordHash": "$2a$10$VLulJNMeuUzzp.j0rJhPIOgbWCWHf7rKgT928KI20xb42ShXSgzmO",
+      "role": "customer",
+      "status": "active",
+      "createdAt": "2026-07-27T17:17:36.119Z",
+      "updatedAt": "2026-08-11T17:17:36.118Z",
+      "lastLoginAt": "2026-08-10T17:17:36.119Z",
+      "phone": "+91 91234 56789"
+    },
+    {
+      "id": "USR-10004",
+      "name": "Priya Patel",
+      "email": "priya@example.com",
+      "passwordHash": "$2a$10$VLulJNMeuUzzp.j0rJhPIOgbWCWHf7rKgT928KI20xb42ShXSgzmO",
+      "role": "customer",
+      "status": "suspended",
+      "createdAt": "2026-07-02T17:17:36.119Z",
+      "updatedAt": "2026-08-11T17:17:36.118Z",
+      "lastLoginAt": "2026-08-01T17:17:36.119Z"
+    }
+  ],
+  "games": [
+    {
+      "id": "GAME-10001",
+      "title": "Counter-Strike 2",
+      "slug": "counter-strike-2",
+      "publisher": "Valve",
+      "developer": "Valve",
+      "description": "The world-renowned competitive tactical multiplayer shooter built on the Source 2 engine.",
+      "categoryIds": [
+        "CAT-10004",
+        "CAT-10010"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "pricePaise": 0,
+      "originalPricePaise": 0,
+      "discountPercent": 0,
+      "rating": 4.8,
+      "reviewCount": 42500,
+      "releaseDate": "2023-09-27",
+      "featured": true,
+      "popular": true,
+      "availability": "available",
+      "image": "/assets/games/cs2.svg",
+      "createdAt": "2026-08-11T17:17:36.118Z",
+      "updatedAt": "2026-08-11T17:17:36.118Z"
+    },
+    {
+      "id": "GAME-10002",
+      "title": "Dota 2",
+      "slug": "dota-2",
+      "publisher": "Valve",
+      "developer": "Valve",
+      "description": "Every day, millions of players worldwide enter battle as one of over a hundred Dota heroes in competitive 5v5 action.",
+      "categoryIds": [
+        "CAT-10005",
+        "CAT-10010"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "pricePaise": 0,
+      "originalPricePaise": 0,
+      "discountPercent": 0,
+      "rating": 4.7,
+      "reviewCount": 38900,
+      "releaseDate": "2013-07-09",
+      "featured": false,
+      "popular": true,
+      "availability": "available",
+      "image": "/assets/games/dota2.svg",
+      "createdAt": "2026-08-11T17:17:36.118Z",
+      "updatedAt": "2026-08-11T17:17:36.118Z"
+    },
+    {
+      "id": "GAME-10003",
+      "title": "PUBG: BATTLEGROUNDS",
+      "slug": "pubg-battlegrounds",
+      "publisher": "KRAFTON, Inc.",
+      "developer": "PUBG Studios",
+      "description": "Land on strategic locations, loot weapons and supplies, and survive to become the last team standing across diverse Battlegrounds.",
+      "categoryIds": [
+        "CAT-10004",
+        "CAT-10010",
+        "CAT-10012"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "pricePaise": 0,
+      "originalPricePaise": 0,
+      "discountPercent": 0,
+      "rating": 4.5,
+      "reviewCount": 29800,
+      "releaseDate": "2017-12-21",
+      "featured": false,
+      "popular": true,
+      "availability": "available",
+      "image": "/assets/games/pubg.svg",
+      "createdAt": "2026-08-11T17:17:36.118Z",
+      "updatedAt": "2026-08-11T17:17:36.118Z"
+    },
+    {
+      "id": "GAME-10004",
+      "title": "Apex Legends",
+      "slug": "apex-legends",
+      "publisher": "Electronic Arts",
+      "developer": "Respawn Entertainment",
+      "description": "Conquer with character in Apex Legends, a free-to-play Hero shooter where legendary characters battle for glory and fortune.",
+      "categoryIds": [
+        "CAT-10004",
+        "CAT-10010"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "pricePaise": 0,
+      "originalPricePaise": 0,
+      "discountPercent": 0,
+      "rating": 4.6,
+      "reviewCount": 31200,
+      "releaseDate": "2019-02-04",
+      "featured": true,
+      "popular": true,
+      "availability": "available",
+      "image": "/assets/games/apex.svg",
+      "createdAt": "2026-08-11T17:17:36.118Z",
+      "updatedAt": "2026-08-11T17:17:36.118Z"
+    },
+    {
+      "id": "GAME-10005",
+      "title": "Marvel Rivals",
+      "slug": "marvel-rivals",
+      "publisher": "NetEase Games",
+      "developer": "NetEase Games",
+      "description": "A team-based Hero Shooter where players assemble an all-star Marvel squad to unleash superpowers in dynamic battlegrounds.",
+      "categoryIds": [
+        "CAT-10004",
+        "CAT-10010",
+        "CAT-10001"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "pricePaise": 0,
+      "originalPricePaise": 0,
+      "discountPercent": 0,
+      "rating": 4.7,
+      "reviewCount": 18400,
+      "releaseDate": "2024-12-06",
+      "featured": true,
+      "popular": true,
+      "availability": "available",
+      "image": "/assets/games/marvel.svg",
+      "createdAt": "2026-08-11T17:17:36.118Z",
+      "updatedAt": "2026-08-11T17:17:36.118Z"
+    },
+    {
+      "id": "GAME-10006",
+      "title": "Rust",
+      "slug": "rust",
+      "publisher": "Facepunch Studios",
+      "developer": "Facepunch Studios",
+      "description": "The only goal in Rust is to survive. Overcome struggles such as hunger, thirst and cold. Build a fire. Build a shelter. Kill animals. Protect yourself.",
+      "categoryIds": [
+        "CAT-10012",
+        "CAT-10010",
+        "CAT-10001"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "pricePaise": 149900,
+      "originalPricePaise": 149900,
+      "discountPercent": 0,
+      "rating": 4.4,
+      "reviewCount": 19400,
+      "releaseDate": "2018-02-08",
+      "featured": false,
+      "popular": true,
+      "availability": "available",
+      "image": "/assets/games/rust.svg",
+      "createdAt": "2026-08-11T17:17:36.118Z",
+      "updatedAt": "2026-08-11T17:17:36.118Z"
+    },
+    {
+      "id": "GAME-10007",
+      "title": "Grand Theft Auto V Enhanced",
+      "slug": "grand-theft-auto-v-enhanced",
+      "publisher": "Rockstar Games",
+      "developer": "Rockstar North",
+      "description": "Experience Los Santos and Blaine County in ultra-high resolution with ray tracing, faster load times, and dynamic world enhancements.",
+      "categoryIds": [
+        "CAT-10001",
+        "CAT-10011",
+        "CAT-10002"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "pricePaise": 124900,
+      "originalPricePaise": 249900,
+      "discountPercent": 50,
+      "rating": 4.9,
+      "reviewCount": 54000,
+      "releaseDate": "2015-04-14",
+      "featured": true,
+      "popular": true,
+      "availability": "available",
+      "image": "/assets/games/gtav.svg",
+      "createdAt": "2026-08-11T17:17:36.118Z",
+      "updatedAt": "2026-08-11T17:17:36.118Z"
+    },
+    {
+      "id": "GAME-10008",
+      "title": "Stardew Valley",
+      "slug": "stardew-valley",
+      "publisher": "ConcernedApe",
+      "developer": "ConcernedApe",
+      "description": "You have inherited your grandfather's old farm plot in Stardew Valley. Armed with hand-me-down tools and a few coins, set out to begin your new life.",
+      "categoryIds": [
+        "CAT-10009",
+        "CAT-10006",
+        "CAT-10003"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "pricePaise": 47900,
+      "originalPricePaise": 47900,
+      "discountPercent": 0,
+      "rating": 4.9,
+      "reviewCount": 22000,
+      "releaseDate": "2016-02-26",
+      "featured": false,
+      "popular": true,
+      "availability": "available",
+      "image": "/assets/games/stardew.svg",
+      "createdAt": "2026-08-11T17:17:36.118Z",
+      "updatedAt": "2026-08-11T17:17:36.118Z"
+    },
+    {
+      "id": "GAME-10009",
+      "title": "Baldur's Gate 3",
+      "slug": "baldurs-gate-3",
+      "publisher": "Larian Studios",
+      "developer": "Larian Studios",
+      "description": "Gather your party and return to the Forgotten Realms in a tale of fellowship, betrayal, sacrifice, survival, and the lure of absolute power.",
+      "categoryIds": [
+        "CAT-10003",
+        "CAT-10005",
+        "CAT-10002"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "pricePaise": 299900,
+      "originalPricePaise": 299900,
+      "discountPercent": 0,
+      "rating": 4.95,
+      "reviewCount": 48000,
+      "releaseDate": "2023-08-03",
+      "featured": true,
+      "popular": true,
+      "availability": "available",
+      "image": "/assets/games/bg3.svg",
+      "createdAt": "2026-08-11T17:17:36.118Z",
+      "updatedAt": "2026-08-11T17:17:36.118Z"
+    },
+    {
+      "id": "GAME-10010",
+      "title": "Cyberpunk 2077",
+      "slug": "cyberpunk-2077",
+      "publisher": "CD PROJEKT RED",
+      "developer": "CD PROJEKT RED",
+      "description": "An open-world action-adventure RPG set in Night City, a megalopolis obsessed with power, glamour, and body modification.",
+      "categoryIds": [
+        "CAT-10003",
+        "CAT-10001",
+        "CAT-10011"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "pricePaise": 149900,
+      "originalPricePaise": 299900,
+      "discountPercent": 50,
+      "rating": 4.7,
+      "reviewCount": 36000,
+      "releaseDate": "2020-12-10",
+      "featured": true,
+      "popular": true,
+      "availability": "available",
+      "image": "/assets/games/cyberpunk.svg",
+      "createdAt": "2026-08-11T17:17:36.118Z",
+      "updatedAt": "2026-08-11T17:17:36.118Z"
+    },
+    {
+      "id": "GAME-10011",
+      "title": "Elden Ring",
+      "slug": "elden-ring",
+      "publisher": "FromSoftware / Bandai Namco",
+      "developer": "FromSoftware",
+      "description": "Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.",
+      "categoryIds": [
+        "CAT-10003",
+        "CAT-10001",
+        "CAT-10011"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "pricePaise": 251900,
+      "originalPricePaise": 359900,
+      "discountPercent": 30,
+      "rating": 4.9,
+      "reviewCount": 41000,
+      "releaseDate": "2022-02-25",
+      "featured": true,
+      "popular": true,
+      "availability": "available",
+      "image": "/assets/games/eldenring.svg",
+      "createdAt": "2026-08-11T17:17:36.118Z",
+      "updatedAt": "2026-08-11T17:17:36.118Z"
+    },
+    {
+      "id": "GAME-10012",
+      "title": "The Witcher 3: Wild Hunt",
+      "slug": "the-witcher-3-wild-hunt",
+      "publisher": "CD PROJEKT RED",
+      "developer": "CD PROJEKT RED",
+      "description": "You are Geralt of Rivia, mercenary monster slayer. Before you stands a war-torn, monster-infested continent you can explore at will.",
+      "categoryIds": [
+        "CAT-10003",
+        "CAT-10002",
+        "CAT-10011"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "pricePaise": 49900,
+      "originalPricePaise": 199900,
+      "discountPercent": 75,
+      "rating": 4.9,
+      "reviewCount": 51000,
+      "releaseDate": "2015-05-18",
+      "featured": false,
+      "popular": true,
+      "availability": "available",
+      "image": "/assets/games/witcher3.svg",
+      "createdAt": "2026-08-11T17:17:36.118Z",
+      "updatedAt": "2026-08-11T17:17:36.118Z"
+    },
+    {
+      "id": "GAME-10013",
+      "title": "Red Dead Redemption 2",
+      "slug": "red-dead-redemption-2",
+      "publisher": "Rockstar Games",
+      "developer": "Rockstar Studios",
+      "description": "America, 1899. Arthur Morgan and the Van der Linde gang are outlaws on the run. With federal agents massing, the gang must rob, steal and fight.",
+      "categoryIds": [
+        "CAT-10001",
+        "CAT-10002",
+        "CAT-10011"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "pricePaise": 105500,
+      "originalPricePaise": 319900,
+      "discountPercent": 67,
+      "rating": 4.9,
+      "reviewCount": 45000,
+      "releaseDate": "2019-12-05",
+      "featured": false,
+      "popular": true,
+      "availability": "available",
+      "image": "/assets/games/rdr2.svg",
+      "createdAt": "2026-08-11T17:17:36.118Z",
+      "updatedAt": "2026-08-11T17:17:36.118Z"
+    },
+    {
+      "id": "GAME-10014",
+      "title": "Forza Horizon 6",
+      "slug": "forza-horizon-6",
+      "publisher": "Xbox Game Studios",
+      "developer": "Playground Games",
+      "description": "Explore vibrant open worlds with hundreds of the world's greatest cars in the ultimate Horizon driving adventure.",
+      "categoryIds": [
+        "CAT-10008",
+        "CAT-10007",
+        "CAT-10011"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "pricePaise": 399900,
+      "originalPricePaise": 399900,
+      "discountPercent": 0,
+      "rating": 4.8,
+      "reviewCount": 15400,
+      "releaseDate": "2024-11-10",
+      "featured": false,
+      "popular": true,
+      "availability": "available",
+      "image": "/assets/games/forza.svg",
+      "createdAt": "2026-08-11T17:17:36.118Z",
+      "updatedAt": "2026-08-11T17:17:36.118Z"
+    },
+    {
+      "id": "GAME-10015",
+      "title": "Diablo IV",
+      "slug": "diablo-iv",
+      "publisher": "Blizzard Entertainment",
+      "developer": "Blizzard Entertainment",
+      "description": "The ultimate action RPG experience with endless evil to slaughter, countless abilities to master, nightmare dungeons, and legendary loot.",
+      "categoryIds": [
+        "CAT-10003",
+        "CAT-10001",
+        "CAT-10010"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "pricePaise": 269900,
+      "originalPricePaise": 449900,
+      "discountPercent": 40,
+      "rating": 4.3,
+      "reviewCount": 16800,
+      "releaseDate": "2023-06-05",
+      "featured": false,
+      "popular": true,
+      "availability": "available",
+      "image": "/assets/games/diablo4.svg",
+      "createdAt": "2026-08-11T17:17:36.118Z",
+      "updatedAt": "2026-08-11T17:17:36.118Z"
+    },
+    {
+      "id": "GAME-10016",
+      "title": "Hades",
+      "slug": "hades",
+      "publisher": "Supergiant Games",
+      "developer": "Supergiant Games",
+      "description": "Defy the god of the dead as you hack and slash your way out of the Underworld in this rogue-like dungeon crawler.",
+      "categoryIds": [
+        "CAT-10009",
+        "CAT-10001",
+        "CAT-10003"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "pricePaise": 110000,
+      "originalPricePaise": 110000,
+      "discountPercent": 0,
+      "rating": 4.9,
+      "reviewCount": 31000,
+      "releaseDate": "2020-09-17",
+      "featured": false,
+      "popular": true,
+      "availability": "available",
+      "image": "/assets/games/hades.svg",
+      "createdAt": "2026-08-11T17:17:36.118Z",
+      "updatedAt": "2026-08-11T17:17:36.118Z"
+    },
+    {
+      "id": "GAME-10017",
+      "title": "Hades II",
+      "slug": "hades-ii",
+      "publisher": "Supergiant Games",
+      "developer": "Supergiant Games",
+      "description": "Battle beyond the Underworld using dark sorcery to take on the Titan of Time in this bewitching rogue-like sequel.",
+      "categoryIds": [
+        "CAT-10009",
+        "CAT-10001",
+        "CAT-10003"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "pricePaise": 130000,
+      "originalPricePaise": 130000,
+      "discountPercent": 0,
+      "rating": 4.9,
+      "reviewCount": 14200,
+      "releaseDate": "2024-05-06",
+      "featured": true,
+      "popular": true,
+      "availability": "available",
+      "image": "/assets/games/hades2.svg",
+      "createdAt": "2026-08-11T17:17:36.118Z",
+      "updatedAt": "2026-08-11T17:17:36.118Z"
+    },
+    {
+      "id": "GAME-10018",
+      "title": "The Elder Scrolls V: Skyrim Special Edition",
+      "slug": "the-elder-scrolls-v-skyrim-special-edition",
+      "publisher": "Bethesda Softworks",
+      "developer": "Bethesda Game Studios",
+      "description": "Winner of more than 200 Game of the Year Awards, Skyrim Special Edition brings the epic fantasy to life with remastered art and effects.",
+      "categoryIds": [
+        "CAT-10003",
+        "CAT-10011",
+        "CAT-10002"
+      ],
+      "platforms": [
+        "PC"
+      ],
+      "pricePaise": 44900,
+      "originalPricePaise": 179900,
+      "discountPercent": 75,
+      "rating": 4.8,
+      "reviewCount": 49000,
+      "releaseDate": "2016-10-28",
+      "featured": false,
+      "popular": true,
+      "availability": "available",
+      "image": "/assets/games/skyrim.svg",
+      "createdAt": "2026-08-11T17:17:36.118Z",
+      "updatedAt": "2026-08-11T17:17:36.118Z"
+    }
+  ],
+  "categories": [
+    {
+      "id": "CAT-10001",
+      "name": "Action",
+      "slug": "action",
+      "status": "active"
+    },
+    {
+      "id": "CAT-10002",
+      "name": "Adventure",
+      "slug": "adventure",
+      "status": "active"
+    },
+    {
+      "id": "CAT-10003",
+      "name": "RPG",
+      "slug": "rpg",
+      "status": "active"
+    },
+    {
+      "id": "CAT-10004",
+      "name": "Shooter",
+      "slug": "shooter",
+      "status": "active"
+    },
+    {
+      "id": "CAT-10005",
+      "name": "Strategy",
+      "slug": "strategy",
+      "status": "active"
+    },
+    {
+      "id": "CAT-10006",
+      "name": "Simulation",
+      "slug": "simulation",
+      "status": "active"
+    },
+    {
+      "id": "CAT-10007",
+      "name": "Sports",
+      "slug": "sports",
+      "status": "active"
+    },
+    {
+      "id": "CAT-10008",
+      "name": "Racing",
+      "slug": "racing",
+      "status": "active"
+    },
+    {
+      "id": "CAT-10009",
+      "name": "Indie",
+      "slug": "indie",
+      "status": "active"
+    },
+    {
+      "id": "CAT-10010",
+      "name": "Multiplayer",
+      "slug": "multiplayer",
+      "status": "active"
+    },
+    {
+      "id": "CAT-10011",
+      "name": "Open World",
+      "slug": "open-world",
+      "status": "active"
+    },
+    {
+      "id": "CAT-10012",
+      "name": "Survival",
+      "slug": "survival",
+      "status": "active"
+    }
+  ],
+  "carts": [
+    {
+      "id": "CART-10001",
+      "userId": "USR-10001",
+      "items": [],
+      "updatedAt": "2026-08-11T17:17:36.901Z"
+    }
+  ],
+  "wishlists": [
+    {
+      "id": "WISH-10001",
+      "userId": "USR-10001",
+      "gameIds": [
+        "GAME-10009",
+        "GAME-10011",
+        "GAME-10017"
+      ],
+      "updatedAt": "2026-08-11T17:17:36.118Z"
+    }
+  ],
+  "orders": [
+    {
+      "id": "ORD-10001",
+      "userId": "USR-10001",
+      "subtotalPaise": 149900,
+      "discountPaise": 0,
+      "taxPaise": 0,
+      "totalPaise": 149900,
+      "currency": "INR",
+      "status": "completed",
+      "paymentId": "PAY-10001",
+      "createdAt": "2026-07-28T17:17:36.119Z"
+    },
+    {
+      "id": "ORD-10002",
+      "userId": "USR-10001",
+      "subtotalPaise": 49900,
+      "discountPaise": 0,
+      "taxPaise": 0,
+      "totalPaise": 49900,
+      "currency": "INR",
+      "status": "completed",
+      "paymentId": "PAY-10002",
+      "createdAt": "2026-08-08T17:17:36.119Z"
+    },
+    {
+      "id": "ORD-10003",
+      "userId": "USR-10001",
+      "subtotalPaise": 149900,
+      "discountPaise": 0,
+      "taxPaise": 0,
+      "totalPaise": 149900,
+      "currency": "INR",
+      "status": "completed",
+      "paymentId": "PAY-10003",
+      "createdAt": "2026-08-11T17:17:36.901Z"
+    }
+  ],
+  "orderItems": [
+    {
+      "id": "ITEM-10001",
+      "orderId": "ORD-10001",
+      "gameId": "GAME-10010",
+      "titleSnapshot": "Cyberpunk 2077",
+      "pricePaise": 149900,
+      "quantity": 1
+    },
+    {
+      "id": "ITEM-10002",
+      "orderId": "ORD-10002",
+      "gameId": "GAME-10012",
+      "titleSnapshot": "The Witcher 3: Wild Hunt",
+      "pricePaise": 49900,
+      "quantity": 1
+    },
+    {
+      "id": "ITEM-10003",
+      "orderId": "ORD-10003",
+      "gameId": "GAME-10006",
+      "titleSnapshot": "Rust",
+      "pricePaise": 149900,
+      "quantity": 1
+    }
+  ],
+  "payments": [
+    {
+      "id": "PAY-10001",
+      "orderId": "ORD-10001",
+      "userId": "USR-10001",
+      "amountPaise": 149900,
+      "currency": "INR",
+      "method": "simulated_card",
+      "status": "completed",
+      "createdAt": "2026-07-28T17:17:36.119Z"
+    },
+    {
+      "id": "PAY-10002",
+      "orderId": "ORD-10002",
+      "userId": "USR-10001",
+      "amountPaise": 49900,
+      "currency": "INR",
+      "method": "simulated_upi",
+      "status": "completed",
+      "createdAt": "2026-08-08T17:17:36.119Z"
+    },
+    {
+      "id": "PAY-10003",
+      "orderId": "ORD-10003",
+      "userId": "USR-10001",
+      "amountPaise": 149900,
+      "currency": "INR",
+      "method": "simulated_card",
+      "status": "completed",
+      "createdAt": "2026-08-11T17:17:36.901Z"
+    }
+  ],
+  "library": [
+    {
+      "id": "LIB-10001",
+      "userId": "USR-10001",
+      "gameId": "GAME-10010",
+      "orderId": "ORD-10001",
+      "acquiredAt": "2026-07-28T17:17:36.119Z",
+      "status": "owned"
+    },
+    {
+      "id": "LIB-10002",
+      "userId": "USR-10001",
+      "gameId": "GAME-10012",
+      "orderId": "ORD-10002",
+      "acquiredAt": "2026-08-08T17:17:36.119Z",
+      "status": "owned"
+    },
+    {
+      "id": "LIB-10003",
+      "userId": "USR-10001",
+      "gameId": "GAME-10001",
+      "orderId": "ORD-10000",
+      "acquiredAt": "2026-07-17T17:17:36.119Z",
+      "status": "owned"
+    },
+    {
+      "id": "LIB-10004",
+      "userId": "USR-10001",
+      "gameId": "GAME-10006",
+      "orderId": "ORD-10003",
+      "acquiredAt": "2026-08-11T17:17:36.901Z",
+      "status": "owned"
+    }
+  ],
+  "promotions": [
+    {
+      "id": "PROMO-10001",
+      "code": "WELCOME10",
+      "type": "percentage",
+      "value": 10,
+      "maxDiscountPaise": 100000,
+      "minimumOrderPaise": 500000,
+      "active": true,
+      "startsAt": "2026-07-12T17:17:36.119Z",
+      "endsAt": "2027-02-07T17:17:36.119Z",
+      "usageLimit": 500,
+      "usedCount": 14
+    },
+    {
+      "id": "PROMO-10002",
+      "code": "GAMER20",
+      "type": "percentage",
+      "value": 20,
+      "maxDiscountPaise": 500000,
+      "minimumOrderPaise": 100000,
+      "active": true,
+      "startsAt": "2026-08-01T17:17:36.119Z",
+      "endsAt": "2026-10-10T17:17:36.119Z",
+      "usageLimit": 100,
+      "usedCount": 8
+    },
+    {
+      "id": "PROMO-10003",
+      "code": "SUMMER500",
+      "type": "fixed",
+      "value": 50000,
+      "maxDiscountPaise": 50000,
+      "minimumOrderPaise": 150000,
+      "active": true,
+      "startsAt": "2026-08-06T17:17:36.119Z",
+      "endsAt": "2026-09-10T17:17:36.119Z",
+      "usageLimit": 250,
+      "usedCount": 22
+    }
+  ],
+  "sessions": [
+    {
+      "id": "SESSION-e634b3805442ae7f989bebab5e37c3a01f5d680a93d3964960b0f4a59d498289",
+      "userId": "USR-10002",
+      "createdAt": "2026-08-11T17:17:36.516Z",
+      "expiresAt": "2026-08-11T18:17:36.516Z",
+      "lastActivityAt": "2026-08-11T17:17:36.560Z"
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "AUDIT-1786469031252-949",
+      "userId": "USR-10001",
+      "action": "LOGOUT",
+      "timestamp": "2026-08-11T17:23:51.252Z",
+      "metadata": {}
+    },
+    {
+      "id": "AUDIT-1786468985393-633",
+      "userId": "USR-10001",
+      "action": "LOGIN",
+      "timestamp": "2026-08-11T17:23:05.393Z",
+      "metadata": {
+        "result": "SUCCESS"
+      }
+    },
+    {
+      "id": "AUDIT-1786468657048-367",
+      "userId": "USR-10001",
+      "action": "LOGIN",
+      "timestamp": "2026-08-11T17:17:37.048Z",
+      "metadata": {
+        "result": "SUCCESS"
+      }
+    },
+    {
+      "id": "AUDIT-1786468656926-993",
+      "userId": "USR-10001",
+      "action": "GAME_ACQUIRED",
+      "timestamp": "2026-08-11T17:17:36.926Z",
+      "metadata": {
+        "gameId": "GAME-10006",
+        "title": "Rust"
+      }
+    },
+    {
+      "id": "AUDIT-1786468656917-229",
+      "userId": "USR-10001",
+      "action": "PAYMENT_COMPLETED",
+      "timestamp": "2026-08-11T17:17:36.917Z",
+      "metadata": {
+        "paymentId": "PAY-10003",
+        "method": "simulated_card"
+      }
+    },
+    {
+      "id": "AUDIT-1786468656909-515",
+      "userId": "USR-10001",
+      "action": "ORDER_CREATED",
+      "timestamp": "2026-08-11T17:17:36.909Z",
+      "metadata": {
+        "orderId": "ORD-10003",
+        "totalPaise": 149900
+      }
+    },
+    {
+      "id": "AUDIT-1786468656884-4",
+      "userId": "USR-10001",
+      "action": "CHECKOUT_STARTED",
+      "timestamp": "2026-08-11T17:17:36.884Z",
+      "metadata": {
+        "method": "simulated_card"
+      }
+    },
+    {
+      "id": "AUDIT-1786468656862-413",
+      "userId": "USR-10001",
+      "action": "CART_ADD",
+      "timestamp": "2026-08-11T17:17:36.862Z",
+      "metadata": {
+        "gameId": "GAME-10006",
+        "title": "Rust"
+      }
+    },
+    {
+      "id": "AUDIT-1786468656792-298",
+      "userId": "USR-10001",
+      "action": "LOGIN",
+      "timestamp": "2026-08-11T17:17:36.792Z",
+      "metadata": {
+        "result": "SUCCESS"
+      }
+    },
+    {
+      "id": "AUDIT-1786468656663-935",
+      "userId": "USR-10001",
+      "action": "LOGIN",
+      "timestamp": "2026-08-11T17:17:36.663Z",
+      "metadata": {
+        "result": "FAILURE_INVALID_CREDENTIALS"
+      }
+    },
+    {
+      "id": "AUDIT-1786468656533-834",
+      "userId": "USR-10002",
+      "action": "LOGIN",
+      "timestamp": "2026-08-11T17:17:36.533Z",
+      "metadata": {
+        "result": "SUCCESS"
+      }
+    },
+    {
+      "id": "AUDIT-1786468656369-961",
+      "userId": "USR-10001",
+      "action": "LOGIN",
+      "timestamp": "2026-08-11T17:17:36.369Z",
+      "metadata": {
+        "result": "SUCCESS"
+      }
+    },
+    {
+      "id": "AUDIT-10001",
+      "userId": "USR-10002",
+      "action": "LOGIN",
+      "timestamp": "2026-08-11T16:17:36.119Z",
+      "metadata": {
+        "role": "admin",
+        "ip": "127.0.0.1"
+      }
+    },
+    {
+      "id": "AUDIT-10002",
+      "userId": "USR-10001",
+      "action": "ORDER_CREATED",
+      "timestamp": "2026-08-08T17:17:36.119Z",
+      "metadata": {
+        "orderId": "ORD-10002",
+        "totalPaise": 49900
+      }
+    },
+    {
+      "id": "AUDIT-10003",
+      "userId": "USR-10001",
+      "action": "PAYMENT_COMPLETED",
+      "timestamp": "2026-08-08T17:17:36.119Z",
+      "metadata": {
+        "paymentId": "PAY-10002",
+        "method": "simulated_upi"
+      }
+    },
+    {
+      "id": "AUDIT-10004",
+      "userId": "USR-10002",
+      "action": "PROMOTION_CREATED",
+      "timestamp": "2026-08-01T17:17:36.119Z",
+      "metadata": {
+        "promoCode": "GAMER20"
+      }
+    }
+  ],
+  "metadata": {
+    "appName": "Mahesh Game Space",
+    "version": "1.0.0",
+    "mode": "simulator",
+    "seededAt": "2026-08-11T17:17:36.118Z",
+    "lastUpdated": "2026-08-11T17:23:51.257Z"
+  }
+}

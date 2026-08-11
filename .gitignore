@@ -1,0 +1,32 @@
+# Dependencies (Auto-installed via `npm install`)
+node_modules/
+.pnpm-store/
+
+# Production Build Outputs (Re-generated via `npm run build`)
+dist/
+dist-ssr/
+
+# Vite Cache & Logs
+.vite/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment & Secrets (Keep .env.example)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Temporary Runtime Files
+*.tmp
+data/runtime.json.tmp
+
+# OS & IDE junk
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
