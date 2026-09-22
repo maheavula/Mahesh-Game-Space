@@ -26,7 +26,7 @@ router.post('/signup', authRateLimiter, validateBody(signupSchema), async (req, 
       success: true,
       data: {
         user,
-        session: { id: session.id, expiresAt: session.expiresAt },
+        expiresAt: session.expiresAt,
         csrfToken,
       },
     });
@@ -39,7 +39,14 @@ router.post('/signup', authRateLimiter, validateBody(signupSchema), async (req, 
 router.post('/login', authRateLimiter, validateBody(loginSchema), async (req, res, next) => {
   try {
     const { email, password } = req.body;
-    const { user, session } = await AuthService.login(email, password);
+    const existingSessionId = req.cookies[SESSION_COOKIE_NAME] || req.headers['x-session-id'];
+    
+    // Edge Case #2: Session Identifier Reuse on Login
+    const { user, session } = await AuthService.login(
+      email,
+      password,
+      typeof existingSessionId === 'string' ? existingSessionId : undefined
+    );
 
     res.cookie(SESSION_COOKIE_NAME, session.id, {
       httpOnly: true,
@@ -55,7 +62,7 @@ router.post('/login', authRateLimiter, validateBody(loginSchema), async (req, re
       success: true,
       data: {
         user,
-        session: { id: session.id, expiresAt: session.expiresAt },
+        expiresAt: session.expiresAt,
         csrfToken,
       },
     });
@@ -91,16 +98,13 @@ router.get('/me', requireAuth, async (req, res) => {
     success: true,
     data: {
       user: req.user,
-      session: {
-        id: req.session?.id,
-        expiresAt: req.session?.expiresAt,
-      },
+      expiresAt: req.session?.expiresAt,
       csrfToken,
     },
   });
 });
 
-// PUT /api/auth/profile
+// PUT /api/auth/profile (Edge Cases #4 & #6)
 router.put('/profile', requireAuth, validateBody(updateProfileSchema), async (req, res, next) => {
   try {
     const updated = await AuthService.updateProfile(req.user!.id, req.body);

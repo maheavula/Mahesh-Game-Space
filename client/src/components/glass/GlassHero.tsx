@@ -24,7 +24,7 @@ export const GlassHero: React.FC = () => {
             </div>
 
             <h1 className="text-4xl sm:text-6xl font-extrabold text-white tracking-tight font-['Outfit'] leading-[1.1]">
-              Mahesh Game Space <br />
+              AMR Game Space <br />
               <span className="bg-gradient-to-r from-violet-400 via-cyan-300 to-magenta-400 bg-clip-text text-transparent glow-text-violet">
                 Discover your next game.
               </span>
@@ -77,11 +77,11 @@ export const GlassHero: React.FC = () => {
           {/* Right Column: Hero Floating Glass Showcase */}
           <div className="lg:col-span-5 relative">
             <GlassCard variant="strong" glow="violet" className="p-6 relative overflow-hidden group">
-              <div className="relative aspect-[16/10] rounded-xl overflow-hidden bg-slate-900 mb-4 border border-slate-700/60">
+              <div className="relative aspect-[16/9] rounded-xl overflow-hidden bg-slate-900 mb-4 border border-slate-700/60">
                 <img
-                  src="/assets/games/cyberpunk.svg"
+                  src="https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg"
                   alt="Cyberpunk 2077 Featured"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-700"
                 />
                 <div className="absolute top-3 left-3 bg-gradient-to-r from-violet-600 to-cyan-500 text-white font-black text-xs px-3 py-1 rounded-lg uppercase tracking-wider shadow-lg">
                   Featured Spotlight

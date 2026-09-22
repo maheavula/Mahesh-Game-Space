@@ -10,10 +10,10 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
     return current;
   }
 
-  console.log('Seeding initial Mahesh Game Space dataset...');
+  console.log('Seeding initial AMR Game Space dataset...');
 
-  // 1. Password Hashes
-  const adminPasswordHash = await bcrypt.hash('Admin@12345', 10);
+  // 1. Password Hashes (Admin uses high-entropy privileged password policy)
+  const adminPasswordHash = await bcrypt.hash('Admin@Sec9#Vault2026!', 10);
   const gamerPasswordHash = await bcrypt.hash('Gamer@12345', 10);
 
   const now = new Date().toISOString();
@@ -22,8 +22,8 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
   const users: User[] = [
     {
       id: 'USR-10001',
-      name: 'Mahesh Kumar',
-      email: 'gamer@maheshgamespace.local',
+      name: 'AMR Kumar',
+      email: 'gamer@amrgamespace.local',
       passwordHash: gamerPasswordHash,
       role: 'customer',
       status: 'active',
@@ -35,7 +35,7 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
     {
       id: 'USR-10002',
       name: 'Admin Director',
-      email: 'admin@maheshgamespace.local',
+      email: 'admin@amrgamespace.local',
       passwordHash: adminPasswordHash,
       role: 'admin',
       status: 'active',
@@ -105,7 +105,7 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
       featured: true,
       popular: true,
       availability: 'available',
-      image: '/assets/games/cs2.svg',
+      image: 'https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg',
       createdAt: now,
       updatedAt: now,
     },
@@ -127,7 +127,7 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
       featured: false,
       popular: true,
       availability: 'available',
-      image: '/assets/games/dota2.svg',
+      image: 'https://cdn.cloudflare.steamstatic.com/steam/apps/570/header.jpg',
       createdAt: now,
       updatedAt: now,
     },
@@ -149,7 +149,7 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
       featured: false,
       popular: true,
       availability: 'available',
-      image: '/assets/games/pubg.svg',
+      image: 'https://cdn.cloudflare.steamstatic.com/steam/apps/578080/header.jpg',
       createdAt: now,
       updatedAt: now,
     },
@@ -171,7 +171,7 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
       featured: true,
       popular: true,
       availability: 'available',
-      image: '/assets/games/apex.svg',
+      image: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1172470/header.jpg',
       createdAt: now,
       updatedAt: now,
     },
@@ -193,7 +193,7 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
       featured: true,
       popular: true,
       availability: 'available',
-      image: '/assets/games/marvel.svg',
+      image: 'https://cdn.cloudflare.steamstatic.com/steam/apps/2767030/header.jpg',
       createdAt: now,
       updatedAt: now,
     },
@@ -215,7 +215,7 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
       featured: false,
       popular: true,
       availability: 'available',
-      image: '/assets/games/rust.svg',
+      image: 'https://cdn.cloudflare.steamstatic.com/steam/apps/252490/header.jpg',
       createdAt: now,
       updatedAt: now,
     },
@@ -237,7 +237,7 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
       featured: true,
       popular: true,
       availability: 'available',
-      image: '/assets/games/gtav.svg',
+      image: 'https://cdn.cloudflare.steamstatic.com/steam/apps/271590/header.jpg',
       createdAt: now,
       updatedAt: now,
     },
@@ -259,7 +259,7 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
       featured: false,
       popular: true,
       availability: 'available',
-      image: '/assets/games/stardew.svg',
+      image: 'https://cdn.cloudflare.steamstatic.com/steam/apps/413150/header.jpg',
       createdAt: now,
       updatedAt: now,
     },
@@ -281,7 +281,7 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
       featured: true,
       popular: true,
       availability: 'available',
-      image: '/assets/games/bg3.svg',
+      image: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg',
       createdAt: now,
       updatedAt: now,
     },
@@ -303,7 +303,7 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
       featured: true,
       popular: true,
       availability: 'available',
-      image: '/assets/games/cyberpunk.svg',
+      image: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg',
       createdAt: now,
       updatedAt: now,
     },
@@ -325,7 +325,7 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
       featured: true,
       popular: true,
       availability: 'available',
-      image: '/assets/games/eldenring.svg',
+      image: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg',
       createdAt: now,
       updatedAt: now,
     },
@@ -347,7 +347,7 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
       featured: false,
       popular: true,
       availability: 'available',
-      image: '/assets/games/witcher3.svg',
+      image: 'https://cdn.cloudflare.steamstatic.com/steam/apps/292030/header.jpg',
       createdAt: now,
       updatedAt: now,
     },
@@ -369,14 +369,14 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
       featured: false,
       popular: true,
       availability: 'available',
-      image: '/assets/games/rdr2.svg',
+      image: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/header.jpg',
       createdAt: now,
       updatedAt: now,
     },
     {
       id: 'GAME-10014',
-      title: 'Forza Horizon 6',
-      slug: 'forza-horizon-6',
+      title: 'Forza Horizon 5',
+      slug: 'forza-horizon-5',
       publisher: 'Xbox Game Studios',
       developer: 'Playground Games',
       description: 'Explore vibrant open worlds with hundreds of the world\'s greatest cars in the ultimate Horizon driving adventure.',
@@ -387,11 +387,11 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
       discountPercent: 0,
       rating: 4.8,
       reviewCount: 15400,
-      releaseDate: '2024-11-10',
+      releaseDate: '2021-11-09',
       featured: false,
       popular: true,
       availability: 'available',
-      image: '/assets/games/forza.svg',
+      image: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1551360/header.jpg',
       createdAt: now,
       updatedAt: now,
     },
@@ -413,7 +413,7 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
       featured: false,
       popular: true,
       availability: 'available',
-      image: '/assets/games/diablo4.svg',
+      image: 'https://cdn.cloudflare.steamstatic.com/steam/apps/2344520/header.jpg',
       createdAt: now,
       updatedAt: now,
     },
@@ -435,7 +435,7 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
       featured: false,
       popular: true,
       availability: 'available',
-      image: '/assets/games/hades.svg',
+      image: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1145360/header.jpg',
       createdAt: now,
       updatedAt: now,
     },
@@ -457,7 +457,7 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
       featured: true,
       popular: true,
       availability: 'available',
-      image: '/assets/games/hades2.svg',
+      image: 'https://cdn.cloudflare.steamstatic.com/steam/apps/1145350/header.jpg',
       createdAt: now,
       updatedAt: now,
     },
@@ -479,7 +479,7 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
       featured: false,
       popular: true,
       availability: 'available',
-      image: '/assets/games/skyrim.svg',
+      image: 'https://cdn.cloudflare.steamstatic.com/steam/apps/489830/header.jpg',
       createdAt: now,
       updatedAt: now,
     },
@@ -493,7 +493,7 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
       type: 'percentage',
       value: 10,
       maxDiscountPaise: 100000, // max ₹1,000 off
-      minimumOrderPaise: 500000, // min ₹5,000 order
+      minimumOrderPaise: 49900, // min ₹499 order
       active: true,
       startsAt: new Date(Date.now() - 30 * 86400000).toISOString(),
       endsAt: new Date(Date.now() + 180 * 86400000).toISOString(),
@@ -528,8 +528,9 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
     }
   ];
 
-  // 6. Demo Customer's Initial Cart, Wishlist, Orders, Payments, Library
+  // 6. Demo Customer & Admin Initial Carts, Wishlists, Orders, Payments, Library
   const demoUserId = 'USR-10001';
+  const adminUserId = 'USR-10002';
 
   const cart = {
     id: 'CART-10001',
@@ -540,6 +541,13 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
     updatedAt: now,
   };
 
+  const adminCart = {
+    id: 'CART-10002',
+    userId: adminUserId,
+    items: [],
+    updatedAt: now,
+  };
+
   const wishlist = {
     id: 'WISH-10001',
     userId: demoUserId,
@@ -547,9 +555,17 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
     updatedAt: now,
   };
 
-  // Seed Orders for demo user
+  const adminWishlist = {
+    id: 'WISH-10002',
+    userId: adminUserId,
+    gameIds: ['GAME-10003', 'GAME-10006'], // PUBG, Rust
+    updatedAt: now,
+  };
+
+  // Seed Orders for demo user and admin
   const order1Date = new Date(Date.now() - 14 * 86400000).toISOString();
   const order2Date = new Date(Date.now() - 3 * 86400000).toISOString();
+  const orderAdminDate = new Date(Date.now() - 7 * 86400000).toISOString();
 
   const orders = [
     {
@@ -575,7 +591,19 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
       status: 'completed' as const,
       paymentId: 'PAY-10002',
       createdAt: order2Date,
-    }
+    },
+    {
+      id: 'ORD-10003',
+      userId: adminUserId,
+      subtotalPaise: 279900,
+      discountPaise: 0,
+      taxPaise: 0,
+      totalPaise: 279900,
+      currency: 'INR' as const,
+      status: 'completed' as const,
+      paymentId: 'PAY-10003',
+      createdAt: orderAdminDate,
+    },
   ];
 
   const orderItems = [
@@ -594,7 +622,15 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
       titleSnapshot: 'The Witcher 3: Wild Hunt',
       pricePaise: 49900,
       quantity: 1,
-    }
+    },
+    {
+      id: 'ITEM-10003',
+      orderId: 'ORD-10003',
+      gameId: 'GAME-10011', // Elden Ring
+      titleSnapshot: 'Elden Ring',
+      pricePaise: 279900,
+      quantity: 1,
+    },
   ];
 
   const payments = [
@@ -617,7 +653,17 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
       method: 'simulated_upi' as const,
       status: 'completed' as const,
       createdAt: order2Date,
-    }
+    },
+    {
+      id: 'PAY-10003',
+      orderId: 'ORD-10003',
+      userId: adminUserId,
+      amountPaise: 279900,
+      currency: 'INR' as const,
+      method: 'simulated_card' as const,
+      status: 'completed' as const,
+      createdAt: orderAdminDate,
+    },
   ];
 
   const library = [
@@ -644,7 +690,47 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
       orderId: 'ORD-10000',
       acquiredAt: new Date(Date.now() - 25 * 86400000).toISOString(),
       status: 'owned' as const,
-    }
+    },
+    {
+      id: 'LIB-10004',
+      userId: demoUserId,
+      gameId: 'GAME-10008', // Stardew Valley
+      orderId: 'ORD-10000',
+      acquiredAt: new Date(Date.now() - 20 * 86400000).toISOString(),
+      status: 'owned' as const,
+    },
+    {
+      id: 'LIB-10005',
+      userId: adminUserId,
+      gameId: 'GAME-10011', // Elden Ring
+      orderId: 'ORD-10003',
+      acquiredAt: orderAdminDate,
+      status: 'owned' as const,
+    },
+    {
+      id: 'LIB-10006',
+      userId: adminUserId,
+      gameId: 'GAME-10010', // Cyberpunk 2077
+      orderId: 'ORD-10003',
+      acquiredAt: orderAdminDate,
+      status: 'owned' as const,
+    },
+    {
+      id: 'LIB-10007',
+      userId: adminUserId,
+      gameId: 'GAME-10001', // Counter-Strike 2
+      orderId: 'ORD-10003',
+      acquiredAt: orderAdminDate,
+      status: 'owned' as const,
+    },
+    {
+      id: 'LIB-10008',
+      userId: adminUserId,
+      gameId: 'GAME-10014', // Forza Horizon 6
+      orderId: 'ORD-10003',
+      acquiredAt: orderAdminDate,
+      status: 'owned' as const,
+    },
   ];
 
   // 7. Audit Logs
@@ -683,8 +769,8 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
     users,
     games,
     categories,
-    carts: [cart],
-    wishlists: [wishlist],
+    carts: [cart, adminCart],
+    wishlists: [wishlist, adminWishlist],
     orders,
     orderItems,
     payments,
@@ -693,7 +779,7 @@ export async function seedInitialDataIfNeeded(force: boolean = false): Promise<R
     sessions: [],
     auditLogs,
     metadata: {
-      appName: 'Mahesh Game Space',
+      appName: 'AMR Game Space',
       version: '1.0.0',
       mode: 'simulator',
       seededAt: now,

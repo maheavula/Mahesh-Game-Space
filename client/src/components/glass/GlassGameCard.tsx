@@ -68,7 +68,7 @@ export const GlassGameCard: React.FC<GlassGameCardProps> = ({
     <Link to={`/games/${game.id}`} className="group block">
       <GlassCard variant="interactive" className="p-3.5 h-full flex flex-col justify-between">
         <div className="relative mb-3">
-          <GlassGameCover src={game.image} alt={game.title} aspectRatio="portrait" />
+          <GlassGameCover src={game.image} alt={game.title} aspectRatio="landscape" />
 
           {/* Discount Badge top left */}
           {game.discountPercent > 0 && (

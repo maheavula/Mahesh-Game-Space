@@ -1,14 +1,15 @@
 {
-  "name": "mahesh-game-space",
+  "name": "amr-game-space",
   "version": "1.0.0",
   "private": true,
   "description": "Full-Stack Gaming Marketplace Simulator",
   "main": "dist/server/server.js",
   "type": "module",
   "scripts": {
+    "install:all": "npm install",
     "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
     "dev:server": "tsx watch server/server.ts",
-    "dev:client": "vite --host",
+    "dev:client": "vite --host 127.0.0.1",
     "build": "tsc -p tsconfig.server.json && vite build",
     "start": "NODE_ENV=production node dist/server/server.js",
     "test": "vitest run",

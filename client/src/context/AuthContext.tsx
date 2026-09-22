@@ -50,7 +50,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
   const signup = async (name: string, email: string, pass: string, phone?: string) => {
     const res = await apiClient.post<{ user: User }>('/api/auth/signup', { name, email, password: pass, phone });
     setUser(res.user);
-    showToast(`Account created successfully! Welcome to Mahesh Game Space.`, 'success');
+    showToast(`Account created successfully! Welcome to AMR Game Space.`, 'success');
   };
 
   const logout = async () => {

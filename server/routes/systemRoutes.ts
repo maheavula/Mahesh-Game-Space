@@ -12,7 +12,7 @@ router.get('/health', async (req, res) => {
     success: true,
     data: {
       status: 'online',
-      application: 'Mahesh Game Space',
+      application: 'AMR Game Space',
       mode: 'simulator',
       timestamp: new Date().toISOString(),
     },
@@ -22,7 +22,6 @@ router.get('/health', async (req, res) => {
 // GET /api/system/session
 router.get('/session', async (req, res) => {
   const sessionId = req.cookies[SESSION_COOKIE_NAME] || req.headers['x-session-id'];
-  let session = null;
   let user = null;
 
   if (sessionId && typeof sessionId === 'string') {
@@ -30,7 +29,6 @@ router.get('/session', async (req, res) => {
     const foundSession = data.sessions.find((s) => s.id === sessionId);
 
     if (foundSession && new Date(foundSession.expiresAt).getTime() > Date.now()) {
-      session = foundSession;
       const foundUser = data.users.find((u) => u.id === foundSession.userId && u.status === 'active');
       if (foundUser) {
         const { passwordHash, ...rest } = foundUser;
@@ -44,12 +42,12 @@ router.get('/session', async (req, res) => {
     setCsrfCookie(res, csrfToken);
   }
 
+  // Session ID is strictly protected in HttpOnly cookie; not reflected in JSON
   res.json({
     success: true,
     data: {
       authenticated: Boolean(user),
       user,
-      session,
       csrfToken,
     },
   });
@@ -77,7 +75,10 @@ router.post('/session/refresh', async (req, res, next) => {
 
     res.json({
       success: true,
-      data: { session: refreshed },
+      data: {
+        refreshed: true,
+        expiresAt: refreshed.expiresAt,
+      },
     });
   } catch (err) {
     next(err);
@@ -90,7 +91,7 @@ router.get('/info', async (req, res) => {
   res.json({
     success: true,
     data: {
-      application: 'Mahesh Game Space',
+      application: 'AMR Game Space',
       version: data.metadata.version || '1.0.0',
       mode: 'simulator',
       persistence: 'runtime.json',

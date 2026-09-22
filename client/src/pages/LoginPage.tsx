@@ -64,7 +64,7 @@ export const LoginPage: React.FC = () => {
           <div className="grid grid-cols-2 gap-2">
             <button
               type="button"
-              onClick={() => handleDemoLogin('gamer@maheshgamespace.local', 'Gamer@12345')}
+              onClick={() => handleDemoLogin('gamer@amrgamespace.local', 'Gamer@12345')}
               className="px-2.5 py-1.5 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-500/40 text-cyan-300 text-xs font-bold transition-all flex items-center justify-center gap-1"
             >
               <UserCheck className="w-3.5 h-3.5" />
@@ -72,7 +72,7 @@ export const LoginPage: React.FC = () => {
             </button>
             <button
               type="button"
-              onClick={() => handleDemoLogin('admin@maheshgamespace.local', 'Admin@12345')}
+              onClick={() => handleDemoLogin('admin@amrgamespace.local', 'Admin@Sec9#Vault2026!')}
               className="px-2.5 py-1.5 rounded-lg bg-violet-500/20 hover:bg-violet-500/30 border border-violet-500/40 text-violet-300 text-xs font-bold transition-all flex items-center justify-center gap-1"
             >
               <ShieldCheck className="w-3.5 h-3.5" />
@@ -85,7 +85,7 @@ export const LoginPage: React.FC = () => {
           <GlassInput
             label="Email Address"
             type="email"
-            placeholder="gamer@maheshgamespace.local"
+            placeholder="gamer@amrgamespace.local"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             icon={<Mail className="w-4 h-4 text-slate-400" />}

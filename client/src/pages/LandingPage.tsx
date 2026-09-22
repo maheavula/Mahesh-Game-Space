@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Gamepad2, Tag, Compass, Sparkles, ShieldCheck, Flame, ArrowRight, Zap } from 'lucide-react';
+import { Gamepad2, Tag, Compass, Sparkles, ShieldCheck, Flame, ArrowRight, Zap, RefreshCw, AlertCircle } from 'lucide-react';
 import { Game, Category } from '../types/index.js';
 import { apiClient } from '../services/apiClient.js';
 import { GlassHero } from '../components/glass/GlassHero.js';
@@ -15,27 +15,37 @@ export const LandingPage: React.FC = () => {
   const [dealGames, setDealGames] = useState<Game[]>([]);
   const [categories, setCategories] = useState<Category[]>([]);
   const [loading, setLoading] = useState(true);
+  const [loadError, setLoadError] = useState<string | null>(null);
+
+  const fetchData = async () => {
+    try {
+      setLoading(true);
+      setLoadError(null);
+      const [gamesRes, catRes] = await Promise.all([
+        apiClient.get<{ games: Game[] }>('/api/catalog/games'),
+        apiClient.get<{ categories: Category[] }>('/api/catalog/categories'),
+      ]);
+
+      const allGames = gamesRes?.games || [];
+      const featured = allGames.filter((g) => g.featured);
+      setFeaturedGames(featured.length > 0 ? featured.slice(0, 4) : allGames.slice(0, 4));
+
+      const popular = allGames.filter((g) => g.popular);
+      setPopularGames(popular.length > 0 ? popular.slice(0, 8) : allGames.slice(0, 8));
+
+      const deals = allGames.filter((g) => g.discountPercent > 0);
+      setDealGames(deals.length > 0 ? deals.slice(0, 4) : allGames.slice(0, 4));
+
+      setCategories(catRes?.categories || []);
+    } catch (error: any) {
+      console.error('Failed to load catalog:', error);
+      setLoadError(error.message || 'Unable to connect to game catalog server.');
+    } finally {
+      setLoading(false);
+    }
+  };
 
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        setLoading(true);
-        const [gamesRes, catRes] = await Promise.all([
-          apiClient.get<{ games: Game[] }>('/api/catalog/games'),
-          apiClient.get<{ categories: Category[] }>('/api/catalog/categories'),
-        ]);
-
-        const allGames = gamesRes.games || [];
-        setFeaturedGames(allGames.filter((g) => g.featured).slice(0, 4));
-        setPopularGames(allGames.filter((g) => g.popular).slice(0, 8));
-        setDealGames(allGames.filter((g) => g.discountPercent > 0).slice(0, 4));
-        setCategories(catRes.categories || []);
-      } catch (error) {
-        console.error('Failed to load catalog:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
     fetchData();
   }, []);
 
@@ -43,6 +53,21 @@ export const LandingPage: React.FC = () => {
     <div className="space-y-20 pb-16">
       {/* Hero Banner */}
       <GlassHero />
+
+      {loadError && (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <GlassCard variant="strong" glow="violet" className="p-6 text-center space-y-3 border-rose-500/30">
+            <AlertCircle className="w-10 h-10 text-rose-400 mx-auto" />
+            <h3 className="text-lg font-bold text-white font-['Outfit']">Catalog Connection Notice</h3>
+            <p className="text-xs text-slate-300">{loadError}</p>
+            <div className="pt-2">
+              <GlassButton variant="primary" size="sm" onClick={fetchData} icon={<RefreshCw className="w-3.5 h-3.5" />}>
+                Retry Loading Catalog
+              </GlassButton>
+            </div>
+          </GlassCard>
+        </div>
+      )}
 
       {/* Featured Games Carousel / Cards */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
@@ -138,82 +163,67 @@ export const LandingPage: React.FC = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6">
         <div className="flex items-center gap-3">
           <div className="p-2 rounded-xl bg-cyan-500/20 text-cyan-400 border border-cyan-500/30">
-            <Compass className="w-5 h-5" />
+            <Gamepad2 className="w-5 h-5" />
           </div>
           <div>
-            <h2 className="text-2xl sm:text-3xl font-extrabold text-white font-['Outfit']">Explore by Category</h2>
-            <p className="text-xs text-slate-400">Find your favorite gaming genre</p>
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-white font-['Outfit']">Explore Categories</h2>
+            <p className="text-xs text-slate-400">Find your favorite genre or gaming adventure</p>
           </div>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-          {categories.map((cat) => (
-            <Link key={cat.id} to={`/games?categorySlug=${cat.slug}`}>
-              <GlassCard variant="interactive" className="p-4 text-center group">
-                <div className="w-10 h-10 rounded-xl bg-slate-800/80 border border-slate-700/80 flex items-center justify-center text-cyan-400 group-hover:text-white group-hover:bg-gradient-to-tr group-hover:from-violet-600 group-hover:to-cyan-500 mx-auto mb-2 transition-all">
-                  <Gamepad2 className="w-5 h-5" />
+          {categories.map((category) => (
+            <Link key={category.id} to={`/games?category=${category.slug}`} className="group block">
+              <GlassCard variant="interactive" className="p-4 text-center space-y-2 h-full flex flex-col items-center justify-center">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-violet-600/30 to-cyan-400/30 border border-white/20 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <Gamepad2 className="w-6 h-6 text-cyan-300" />
                 </div>
-                <span className="text-xs font-bold text-slate-200 group-hover:text-white font-['Outfit']">
-                  {cat.name}
-                </span>
+                <h3 className="font-bold text-sm text-white font-['Outfit'] group-hover:text-cyan-400 transition-colors">
+                  {category.name}
+                </h3>
+                <span className="text-[11px] text-slate-400 block group-hover:text-slate-300">View Collection</span>
               </GlassCard>
             </Link>
           ))}
         </div>
       </section>
 
-      {/* Why Choose Mahesh Game Space */}
+      {/* Trust & Simulator Feature Highlights */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <GlassCard variant="strong" glow="violet" className="p-8 sm:p-12 relative overflow-hidden">
-          <div className="max-w-3xl space-y-4 relative z-10">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/20 text-violet-300 text-xs font-semibold">
-              <ShieldCheck className="w-4 h-4 text-cyan-400" />
-              <span>Simulated Gaming Storefront</span>
+        <GlassCard variant="strong" glow="violet" className="p-8 sm:p-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="space-y-3 text-center md:text-left">
+              <div className="w-12 h-12 rounded-2xl bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 flex items-center justify-center mx-auto md:mx-0">
+                <ShieldCheck className="w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-bold text-white font-['Outfit']">Safe Simulator Architecture</h3>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Zero external payment credentials required. 100% simulated transactions with integer paise precision and instant digital delivery.
+              </p>
             </div>
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white font-['Outfit']">
-              Why Mahesh Game Space?
-            </h2>
-            <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
-              Experience a sleek, futuristic marketplace equipped with atomic local persistence, strict OWASP security controls, server-side cart & checkout verification, instant wishlist management, and a personalized digital library.
-            </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
-              <div className="space-y-1">
-                <h4 className="text-sm font-bold text-white font-['Outfit'] flex items-center gap-2">
-                  <Zap className="w-4 h-4 text-cyan-400" /> Instant Discovery
-                </h4>
-                <p className="text-xs text-slate-400">Search and filter top recognizable games seamlessly.</p>
+            <div className="space-y-3 text-center md:text-left">
+              <div className="w-12 h-12 rounded-2xl bg-cyan-500/20 border border-cyan-500/30 text-cyan-400 flex items-center justify-center mx-auto md:mx-0">
+                <Zap className="w-6 h-6" />
               </div>
+              <h3 className="text-lg font-bold text-white font-['Outfit']">Instant Game Ownership</h3>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Purchased titles are immediately recorded to your personal game library with atomic persistence and unique simulated license keys.
+              </p>
+            </div>
 
-              <div className="space-y-1">
-                <h4 className="text-sm font-bold text-white font-[Outfit] flex items-center gap-2">
-                  <ShieldCheck className="w-4 h-4 text-violet-400" /> Account Security
-                </h4>
-                <p className="text-xs text-slate-400">Encrypted sessions and protected digital checkout.</p>
+            <div className="space-y-3 text-center md:text-left">
+              <div className="w-12 h-12 rounded-2xl bg-violet-500/20 border border-violet-500/30 text-violet-400 flex items-center justify-center mx-auto md:mx-0">
+                <Compass className="w-6 h-6" />
               </div>
-
-              <div className="space-y-1">
-                <h4 className="text-sm font-bold text-white font-['Outfit'] flex items-center gap-2">
-                  <Tag className="w-4 h-4 text-emerald-400" /> Server Authoritative
-                </h4>
-                <p className="text-xs text-slate-400">Prices and discounts recalculated server-side.</p>
-              </div>
+              <h3 className="text-lg font-bold text-white font-['Outfit']">Admin Control Center</h3>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                Comprehensive administrator portal for catalog editing, customer suspension, sales reporting, and promotional code creation.
+              </p>
             </div>
           </div>
         </GlassCard>
       </section>
-
-      {/* Footer */}
-      <footer className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800/80 pt-8 flex flex-col md:flex-row items-center justify-between text-xs text-slate-400 gap-4">
-        <div className="flex items-center gap-2">
-          <Gamepad2 className="w-4 h-4 text-cyan-400" />
-          <span className="font-bold text-slate-200">Mahesh Game Space</span>
-          <span>— Full-Stack Gaming Marketplace Simulator</span>
-        </div>
-        <div>
-          <span>Demo Disclaimer: All games, payments, licenses, and ownership are 100% simulated locally in <code>runtime.json</code>.</span>
-        </div>
-      </footer>
     </div>
   );
 };

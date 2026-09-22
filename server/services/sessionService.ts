@@ -36,10 +36,18 @@ export class SessionService {
     });
   }
 
+  public static async destroySession(sessionId: string): Promise<void> {
+    return this.invalidateSession(sessionId);
+  }
+
   public static async invalidateAllUserSessions(userId: string): Promise<void> {
     await PersistenceService.updateData((draft) => {
       draft.sessions = draft.sessions.filter((s) => s.userId !== userId);
     });
+  }
+
+  public static async destroyAllUserSessions(userId: string): Promise<void> {
+    return this.invalidateAllUserSessions(userId);
   }
 
   public static async refreshSession(sessionId: string): Promise<Session | null> {

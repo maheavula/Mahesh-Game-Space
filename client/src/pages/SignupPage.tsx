@@ -41,13 +41,13 @@ export const SignupPage: React.FC = () => {
             </div>
           </div>
           <h1 className="text-2xl font-extrabold text-white font-['Outfit']">Create Account</h1>
-          <p className="text-xs text-slate-400">Join Mahesh Game Space storefront</p>
+          <p className="text-xs text-slate-400">Join AMR Game Space storefront</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <GlassInput
             label="Full Name"
-            placeholder="Mahesh Kumar"
+            placeholder="AMR Gamer"
             value={name}
             onChange={(e) => setName(e.target.value)}
             icon={<User className="w-4 h-4 text-slate-400" />}

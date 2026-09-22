@@ -24,18 +24,18 @@ export const CheckoutPage: React.FC = () => {
 
   // Requirement 4: Realistic payment form fields for 3 different payment ways
   // 1. Credit / Debit Card Details
-  const [cardholderName, setCardholderName] = useState(user?.name || 'Mahesh Kumar');
-  const [cardNumber, setCardNumber] = useState('4532 •••• •••• 8892');
-  const [cardExpiry, setCardExpiry] = useState('08/28');
-  const [cardCvv, setCardCvv] = useState('888');
+  const [cardholderName, setCardholderName] = useState(user?.name || '');
+  const [cardNumber, setCardNumber] = useState('');
+  const [cardExpiry, setCardExpiry] = useState('');
+  const [cardCvv, setCardCvv] = useState('');
 
   // 2. UPI Details
-  const [upiId, setUpiId] = useState('mahesh@upi');
+  const [upiId, setUpiId] = useState('');
   const [upiApp, setUpiApp] = useState('gpay');
 
   // 3. Wallet Details
   const [walletProvider, setWalletProvider] = useState('mgs_wallet');
-  const [walletPhone, setWalletPhone] = useState(user?.phone || '+91 98765 43210');
+  const [walletPhone, setWalletPhone] = useState(user?.phone || '');
 
   if (!user) {
     navigate('/login');
@@ -235,7 +235,7 @@ export const CheckoutPage: React.FC = () => {
                       value={walletProvider}
                       onChange={(e: React.ChangeEvent<HTMLSelectElement>) => setWalletProvider(e.target.value)}
                       options={[
-                        { value: 'mgs_wallet', label: 'Mahesh Game Space Gaming Wallet' },
+                        { value: 'mgs_wallet', label: 'AMR Game Space Gaming Wallet' },
                         { value: 'paytm_wallet', label: 'Paytm Wallet' },
                         { value: 'mobikwik', label: 'MobiKwik Wallet' },
                       ]}

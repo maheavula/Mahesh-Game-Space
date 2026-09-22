@@ -70,7 +70,7 @@ export const GlassNavbar: React.FC = () => {
           </div>
           <div className="flex flex-col">
             <span className="font-['Outfit'] font-extrabold text-base sm:text-lg text-white tracking-wider group-hover:text-cyan-400 transition-colors">
-              MAHESH GAME SPACE
+              AMR GAME SPACE
             </span>
             <span className="text-[9px] sm:text-[10px] text-slate-400 font-semibold tracking-widest uppercase -mt-1">
               DIGITAL STOREFRONT

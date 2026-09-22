@@ -76,7 +76,7 @@ export const LibraryPage: React.FC = () => {
           {library.map((item) => (
             <GlassCard key={item.id} variant="interactive" className="p-3.5 flex flex-col justify-between h-full group">
               <div className="relative mb-3">
-                <GlassGameCover src={item.game.image} alt={item.game.title} aspectRatio="portrait" />
+                <GlassGameCover src={item.game.image} alt={item.game.title} aspectRatio="landscape" />
                 <div className="absolute top-2 right-2 bg-emerald-500/90 text-white font-extrabold text-[10px] px-2 py-0.5 rounded-md flex items-center gap-1 shadow-lg backdrop-blur-sm">
                   <Check className="w-3 h-3" />
                   <span>Owned</span>
@@ -128,7 +128,7 @@ export const LibraryPage: React.FC = () => {
                 Game Ownership Confirmed
               </h4>
               <p className="text-xs text-slate-300 max-w-sm mx-auto leading-relaxed">
-                Game ownership recorded in Mahesh Game Space simulator.
+                Game ownership recorded in AMR Game Space simulator.
               </p>
             </div>
 

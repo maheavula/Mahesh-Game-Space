@@ -21,7 +21,7 @@ export const CartPage: React.FC = () => {
         <EmptyState
           icon={<ShoppingBag className="w-8 h-8" />}
           title="Sign in to View Your Cart"
-          description="Log in to your Mahesh Game Space account to manage items in your shopping cart."
+          description="Log in to your AMR Game Space account to manage items in your shopping cart."
           actionText="Sign In"
           actionLink="/login"
         />
@@ -71,7 +71,7 @@ export const CartPage: React.FC = () => {
           {items.map(({ game, quantity, subtotalPaise: itemSubtotal }) => (
             <GlassCard key={game.id} variant="normal" className="p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-4 w-full sm:w-auto">
-                <GlassGameCover src={game.image} alt={game.title} aspectRatio="square" className="w-20 h-20 shrink-0" />
+                <GlassGameCover src={game.image} alt={game.title} aspectRatio="landscape" className="w-28 h-16 shrink-0" />
                 <div>
                   <Link to={`/games/${game.id}`} className="font-bold text-base text-white font-['Outfit'] hover:text-violet-300">
                     {game.title}

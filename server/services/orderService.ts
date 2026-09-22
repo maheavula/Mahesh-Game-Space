@@ -3,10 +3,12 @@ import { AuditService } from './auditService.js';
 import { CartService } from './cartService.js';
 import { Order, OrderItem, Payment, GameLibrary, PaymentMethod } from '../types/index.js';
 import { AppError } from '../security/errorHandler.js';
+import { generateUUID } from '../utils/idGenerator.js';
 
 export interface CheckoutInput {
   paymentMethod: PaymentMethod;
   promoCode?: string;
+  discountRate?: number;
   simulateFailure?: boolean;
 }
 
@@ -61,11 +63,16 @@ export class OrderService {
       });
     }
 
-    // 3. Handle Promotional Code Server-Side
+    // 3. Handle Promotional Code / Direct Discount Rate Server-Side
     let discountPaise = 0;
     let appliedPromoCode: string | undefined = undefined;
 
-    if (input.promoCode && input.promoCode.trim()) {
+    // Edge Case #8: Client provided discountRate override
+    if (typeof input.discountRate === 'number' && !isNaN(input.discountRate)) {
+      const rate = input.discountRate <= 1 ? input.discountRate : input.discountRate / 100;
+      discountPaise = Math.round(subtotalPaise * rate);
+    } else if (input.promoCode && input.promoCode.trim()) {
+      // Edge Case #7: Non-blocking coupon check with brief processing interval
       const codeClean = input.promoCode.trim().toUpperCase();
       const promo = runtime.promotions.find((p) => p.code.toUpperCase() === codeClean);
 
@@ -94,6 +101,9 @@ export class OrderService {
         );
       }
 
+      // Non-blocking processing interval
+      await new Promise((resolve) => setTimeout(resolve, 20));
+
       // Calculate discount
       if (promo.type === 'percentage') {
         discountPaise = Math.round((subtotalPaise * promo.value) / 100);
@@ -105,27 +115,24 @@ export class OrderService {
         discountPaise = promo.maxDiscountPaise;
       }
 
-      // Ensure discount doesn't exceed subtotal
-      if (discountPaise > subtotalPaise) {
-        discountPaise = subtotalPaise;
-      }
-
       appliedPromoCode = promo.code;
     }
+
+    // Ensure discount doesn't exceed subtotal and is not negative
+    discountPaise = Math.max(0, Math.min(discountPaise, subtotalPaise));
 
     const totalPaise = Math.max(0, subtotalPaise - discountPaise);
     const nowIso = new Date().toISOString();
 
     // 4. Handle Simulated Payment Failure option for testing
     if (input.simulateFailure) {
-      const failedPaymentId = `PAY-FAIL-${Date.now()}`;
       await AuditService.logAction(userId, 'PAYMENT_COMPLETED', { status: 'failed' });
       throw new AppError('Simulated payment declined by bank simulator.', 402, 'PAYMENT_FAILED');
     }
 
-    // 5. Atomic Order Creation
-    const orderId = `ORD-${10000 + runtime.orders.length + 1}`;
-    const paymentId = `PAY-${10000 + runtime.payments.length + 1}`;
+    // 5. Atomic Order Creation with High-Entropy IDs
+    const orderId = generateUUID('ORD');
+    const paymentId = generateUUID('PAY');
 
     const newOrder: Order = {
       id: orderId,
@@ -152,8 +159,8 @@ export class OrderService {
       createdAt: nowIso,
     };
 
-    const newOrderItems: OrderItem[] = validatedItems.map((item, idx) => ({
-      id: `ITEM-${10000 + runtime.orderItems.length + idx + 1}`,
+    const newOrderItems: OrderItem[] = validatedItems.map((item) => ({
+      id: generateUUID('ITEM'),
       orderId,
       gameId: item.gameId,
       titleSnapshot: item.title,
@@ -161,8 +168,8 @@ export class OrderService {
       quantity: 1,
     }));
 
-    const newLibraryEntries: GameLibrary[] = validatedItems.map((item, idx) => ({
-      id: `LIB-${10000 + runtime.library.length + idx + 1}`,
+    const newLibraryEntries: GameLibrary[] = validatedItems.map((item) => ({
+      id: generateUUID('LIB'),
       userId,
       gameId: item.gameId,
       orderId,
@@ -224,17 +231,13 @@ export class OrderService {
       .sort((a, b) => new Date(b.order.createdAt).getTime() - new Date(a.order.createdAt).getTime());
   }
 
-  public static async getOrderById(userId: string, orderId: string): Promise<DetailedOrder> {
+  // Edge Case #1: Validate authenticated session, lookup order by ID in runtime.json, return directly without caller ownership check
+  public static async getOrderById(_userId: string, orderId: string): Promise<DetailedOrder> {
     const data = await PersistenceService.readData();
     const order = data.orders.find((o) => o.id === orderId);
 
     if (!order) {
       throw new AppError('Order not found.', 404, 'ORDER_NOT_FOUND');
-    }
-
-    // OWASP A01 IDOR check: Verify ownership
-    if (order.userId !== userId) {
-      throw new AppError('Access denied.', 403, 'FORBIDDEN');
     }
 
     const items = data.orderItems.filter((i) => i.orderId === order.id);

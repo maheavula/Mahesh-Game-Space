@@ -153,7 +153,7 @@ export const ProfilePage: React.FC = () => {
             </div>
             <div>
               <h2 className="text-xl font-bold text-white font-['Outfit']">Your Games Collection</h2>
-              <p className="text-xs text-slate-400">Games registered to your Mahesh Game Space profile</p>
+              <p className="text-xs text-slate-400">Games registered to your AMR Game Space profile</p>
             </div>
           </div>
 
@@ -180,7 +180,7 @@ export const ProfilePage: React.FC = () => {
               <Link key={libId} to={`/games/${game.id}`} className="group block">
                 <GlassCard variant="interactive" className="p-2.5 space-y-2 text-center h-full flex flex-col justify-between">
                   <div className="relative">
-                    <GlassGameCover src={game.image} alt={game.title} aspectRatio="portrait" />
+                    <GlassGameCover src={game.image} alt={game.title} aspectRatio="landscape" />
                     <div className="absolute top-1.5 right-1.5 bg-emerald-500/90 text-white font-bold text-[9px] px-1.5 py-0.5 rounded shadow">
                       Owned
                     </div>

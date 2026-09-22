@@ -47,7 +47,7 @@ export const AdminSystemPage: React.FC = () => {
             <div className="space-y-3 text-xs">
               <div className="flex justify-between">
                 <span className="text-slate-400">Product Name:</span>
-                <span className="font-bold text-white">Mahesh Game Space</span>
+                <span className="font-bold text-white">AMR Game Space</span>
               </div>
 
               <div className="flex justify-between">

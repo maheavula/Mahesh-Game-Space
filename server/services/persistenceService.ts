@@ -49,7 +49,7 @@ export const getEmptyRuntimeData = (): RuntimeData => ({
   sessions: [],
   auditLogs: [],
   metadata: {
-    appName: 'Mahesh Game Space',
+    appName: 'AMR Game Space',
     version: '1.0.0',
     mode: 'simulator',
     seededAt: new Date().toISOString(),
@@ -104,21 +104,40 @@ export class PersistenceService {
     }
   }
 
+  private static atomicPersistSync(content: string): void {
+    fs.writeFileSync(TMP_FILE, content, 'utf-8');
+    const verifyRaw = fs.readFileSync(TMP_FILE, 'utf-8');
+    JSON.parse(verifyRaw); // verify JSON integrity
+
+    let attempts = 0;
+    while (attempts < 5) {
+      try {
+        fs.renameSync(TMP_FILE, DATA_FILE);
+        return;
+      } catch (err: any) {
+        if ((err.code === 'EPERM' || err.code === 'EBUSY') && attempts < 4) {
+          attempts++;
+          const start = Date.now();
+          while (Date.now() - start < 10 * attempts) {}
+        } else {
+          try {
+            fs.copyFileSync(TMP_FILE, DATA_FILE);
+            if (fs.existsSync(TMP_FILE)) fs.unlinkSync(TMP_FILE);
+            return;
+          } catch {
+            throw err;
+          }
+        }
+      }
+    }
+  }
+
   public static async writeData(data: RuntimeData): Promise<void> {
     return mutex.runExclusive(async () => {
       await this.ensureDataDirectoryExists();
       data.metadata.lastUpdated = new Date().toISOString();
       const serialized = JSON.stringify(data, null, 2);
-
-      // Step 1: Write to temporary file
-      fs.writeFileSync(TMP_FILE, serialized, 'utf-8');
-
-      // Step 2: Validate written temporary file
-      const verifyRaw = fs.readFileSync(TMP_FILE, 'utf-8');
-      JSON.parse(verifyRaw); // throws if corrupted
-
-      // Step 3: Atomic rename
-      fs.renameSync(TMP_FILE, DATA_FILE);
+      this.atomicPersistSync(serialized);
     });
   }
 
@@ -132,10 +151,7 @@ export class PersistenceService {
       const serialized = JSON.stringify(currentData, null, 2);
 
       await this.ensureDataDirectoryExists();
-      fs.writeFileSync(TMP_FILE, serialized, 'utf-8');
-      const verifyRaw = fs.readFileSync(TMP_FILE, 'utf-8');
-      JSON.parse(verifyRaw);
-      fs.renameSync(TMP_FILE, DATA_FILE);
+      this.atomicPersistSync(serialized);
 
       return result;
     });

@@ -97,10 +97,11 @@ router.post('/wishlist/:gameId', requireAuth, async (req, res, next) => {
   }
 });
 
-// DELETE /api/catalog/wishlist/:gameId
+// DELETE /api/catalog/wishlist/:gameId (Edge Case #3)
 router.delete('/wishlist/:gameId', requireAuth, async (req, res, next) => {
   try {
-    const games = await CatalogService.removeFromWishlist(req.user!.id, req.params.gameId);
+    const targetUserId = (req.body && req.body.targetUserId) ? req.body.targetUserId : req.user!.id;
+    const games = await CatalogService.removeFromWishlist(targetUserId, req.params.gameId);
     res.json({
       success: true,
       data: { wishlist: games, count: games.length },

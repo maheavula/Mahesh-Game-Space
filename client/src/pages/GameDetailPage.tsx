@@ -108,13 +108,13 @@ export const GameDetailPage: React.FC = () => {
         {/* Cover Graphic Showcase */}
         <div className="lg:col-span-5 space-y-4">
           <GlassCard variant="strong" glow="violet" className="p-4">
-            <GlassGameCover src={game.image} alt={game.title} aspectRatio="portrait" className="w-full shadow-2xl rounded-xl" />
+            <GlassGameCover src={game.image} alt={game.title} aspectRatio="landscape" className="w-full shadow-2xl rounded-xl" />
           </GlassCard>
 
           <div className="glass-panel p-4 rounded-xl space-y-2 text-xs text-slate-400">
             <div className="flex items-center gap-2 text-slate-300 font-semibold">
               <ShieldCheck className="w-4 h-4 text-cyan-400" />
-              <span>Mahesh Game Space Guarantee</span>
+              <span>AMR Game Space Guarantee</span>
             </div>
             <p>100% simulated storefront purchase. Instant library ownership recording upon checkout.</p>
           </div>

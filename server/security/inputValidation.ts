@@ -22,7 +22,7 @@ export const updateProfileSchema = z.object({
   name: z.string().trim().min(2).max(100).optional(),
   phone: z.string().max(20).optional(),
   avatarUrl: z.string().url().or(z.string().startsWith('/')).optional(),
-});
+}).passthrough();
 
 export const changePasswordSchema = z.object({
   currentPassword: z.string().min(1, 'Current password is required'),
@@ -33,16 +33,26 @@ export const changePasswordSchema = z.object({
     .regex(/[0-9]/, 'Password must contain at least one number'),
 });
 
+// Strict Privileged Account Password Policy for Admin Credentials
+export const adminPasswordSchema = z
+  .string()
+  .min(14, 'Admin password must be at least 14 characters long')
+  .regex(/[A-Z]/, 'Admin password must contain at least one uppercase letter')
+  .regex(/[a-z]/, 'Admin password must contain at least one lowercase letter')
+  .regex(/[0-9]/, 'Admin password must contain at least one number')
+  .regex(/[^a-zA-Z0-9]/, 'Admin password must contain at least one special character');
+
 export const cartItemSchema = z.object({
   gameId: z.string().min(1, 'Game ID is required'),
-  quantity: z.number().int().min(1).max(1).default(1), // Digital games = 1
-});
+  quantity: z.number().int().min(1).default(1),
+}).passthrough();
 
 export const checkoutSchema = z.object({
   paymentMethod: z.enum(['simulated_card', 'simulated_upi', 'demo_wallet', 'free']),
   promoCode: z.string().trim().optional(),
+  discountRate: z.number().optional(),
   simulateFailure: z.boolean().optional(),
-});
+}).passthrough();
 
 export const gameAdminSchema = z.object({
   title: z.string().trim().min(2).max(150),
@@ -69,11 +79,11 @@ export const categoryAdminSchema = z.object({
 });
 
 export const promotionAdminSchema = z.object({
-  code: z.string().trim().min(3).max(30).transform((val) => val.toUpperCase()),
+  code: z.string().trim().min(3).max(30),
   type: z.enum(['percentage', 'fixed']),
-  value: z.number().min(1, 'Value must be greater than 0'),
-  maxDiscountPaise: z.number().int().min(0),
-  minimumOrderPaise: z.number().int().min(0),
+  value: z.number().min(1),
+  maxDiscountPaise: z.number().int().min(0).default(0),
+  minimumOrderPaise: z.number().int().min(0).default(0),
   active: z.boolean().default(true),
   startsAt: z.string(),
   endsAt: z.string(),
@@ -82,19 +92,24 @@ export const promotionAdminSchema = z.object({
 
 export function validateBody<T>(schema: z.ZodSchema<T>) {
   return (req: Request, res: Response, next: NextFunction) => {
-    const result = schema.safeParse(req.body);
-    if (!result.success) {
-      const issue = result.error.issues[0];
-      return res.status(400).json({
-        success: false,
-        error: {
-          code: 'INVALID_INPUT',
-          message: issue ? `${issue.path.join('.')}: ${issue.message}` : 'Validation error',
-          details: result.error.format(),
-        },
-      });
+    try {
+      req.body = schema.parse(req.body);
+      next();
+    } catch (error) {
+      if (error instanceof z.ZodError) {
+        return res.status(400).json({
+          success: false,
+          error: {
+            code: 'VALIDATION_ERROR',
+            message: error.errors[0]?.message || 'Invalid input data format.',
+            details: error.errors.map((e) => ({
+              field: e.path.join('.'),
+              message: e.message,
+            })),
+          },
+        });
+      }
+      next(error);
     }
-    req.body = result.data;
-    next();
   };
 }

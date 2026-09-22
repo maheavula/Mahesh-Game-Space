@@ -61,7 +61,7 @@ export const WishlistPage: React.FC = () => {
         <EmptyState
           icon={<Heart className="w-8 h-8" />}
           title="Sign in to View Your Wishlist"
-          description="Log in to your Mahesh Game Space account to save games and track discount offers."
+          description="Log in to your AMR Game Space account to save games and track discount offers."
           actionText="Sign In Now"
           actionLink="/login"
         />
@@ -94,7 +94,7 @@ export const WishlistPage: React.FC = () => {
           {wishlist.map((game) => (
             <GlassCard key={game.id} variant="interactive" className="p-4 flex flex-col sm:flex-row items-center justify-between gap-4">
               <div className="flex items-center gap-4 w-full sm:w-auto">
-                <GlassGameCover src={game.image} alt={game.title} aspectRatio="square" className="w-20 h-20 shrink-0" />
+                <GlassGameCover src={game.image} alt={game.title} aspectRatio="landscape" className="w-28 h-16 shrink-0" />
                 <div>
                   <Link to={`/games/${game.id}`} className="font-bold text-lg text-white font-['Outfit'] hover:text-violet-300">
                     {game.title}

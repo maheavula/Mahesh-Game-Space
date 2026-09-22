@@ -43,6 +43,8 @@ export interface User {
   lastLoginAt: string | null;
   phone?: string;
   avatarUrl?: string;
+  preferences?: Record<string, any>;
+  [key: string]: any;
 }
 
 export interface UserSanitized {
@@ -56,6 +58,8 @@ export interface UserSanitized {
   lastLoginAt: string | null;
   phone?: string;
   avatarUrl?: string;
+  preferences?: Record<string, any>;
+  [key: string]: any;
 }
 
 export interface Game {

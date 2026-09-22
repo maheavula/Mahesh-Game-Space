@@ -38,8 +38,8 @@ router.post('/items', validateBody(cartItemSchema), async (req, res, next) => {
 // PATCH /api/cart/items/:gameId
 router.patch('/items/:gameId', async (req, res, next) => {
   try {
-    // Digital games always have quantity = 1 per PRD
-    const cartData = await CartService.addItem(req.user!.id, req.params.gameId);
+    const quantity = Number(req.body.quantity) || 1;
+    const cartData = await CartService.updateItemQuantity(req.user!.id, req.params.gameId, quantity);
     res.json({
       success: true,
       data: cartData,
