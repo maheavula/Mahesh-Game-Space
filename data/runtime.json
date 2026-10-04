@@ -4,36 +4,36 @@
       "id": "USR-10001",
       "name": "AMR Kumar",
       "email": "gamer@amrgamespace.local",
-      "passwordHash": "$2a$10$LLYnfGmoLkfKXfM.sylRWe9Y99q9TsV1S.70Q/Kmrgg3d.f8Aomlu",
+      "passwordHash": "$2a$10$5hY22RRvB.cCjKoUhnaRJ.5YdGFoB7Q3pUM7yfCPRfePOzIRN245K",
       "role": "customer",
       "status": "active",
-      "createdAt": "2026-08-22T18:11:20.047Z",
-      "updatedAt": "2026-09-21T18:11:20.046Z",
-      "lastLoginAt": "2026-09-21T18:11:21.675Z",
+      "createdAt": "2026-09-04T14:02:01.497Z",
+      "updatedAt": "2026-10-04T14:02:01.496Z",
+      "lastLoginAt": "2026-10-04T14:02:03.642Z",
       "phone": "+91 98765 43210"
     },
     {
       "id": "USR-10002",
       "name": "Admin Director",
       "email": "admin@amrgamespace.local",
-      "passwordHash": "$2a$10$I0hzlgRM2ljFu.Vp1kOa8OHKNYbx0BKbUGjcwPQvpRWXFiau5DX16",
+      "passwordHash": "$2a$10$r..dXGjJD87FQ5ubs83DAen2n/GpQHaSHU.niw.w7oVRqVRB.OyhG",
       "role": "admin",
       "status": "active",
-      "createdAt": "2026-06-23T18:11:20.047Z",
-      "updatedAt": "2026-09-21T18:11:20.046Z",
-      "lastLoginAt": "2026-09-21T18:11:20.409Z",
+      "createdAt": "2026-07-06T14:02:01.497Z",
+      "updatedAt": "2026-10-04T14:02:01.496Z",
+      "lastLoginAt": "2026-10-04T14:02:02.148Z",
       "phone": "+91 99999 88888"
     },
     {
       "id": "USR-10003",
       "name": "Aarav Sharma",
       "email": "aarav@example.com",
-      "passwordHash": "$2a$10$LLYnfGmoLkfKXfM.sylRWe9Y99q9TsV1S.70Q/Kmrgg3d.f8Aomlu",
+      "passwordHash": "$2a$10$5hY22RRvB.cCjKoUhnaRJ.5YdGFoB7Q3pUM7yfCPRfePOzIRN245K",
       "role": "customer",
       "status": "active",
-      "createdAt": "2026-09-06T18:11:20.047Z",
-      "updatedAt": "2026-09-21T18:11:21.208Z",
-      "lastLoginAt": "2026-09-21T18:11:21.499Z",
+      "createdAt": "2026-09-19T14:02:01.497Z",
+      "updatedAt": "2026-10-04T14:02:03.115Z",
+      "lastLoginAt": "2026-10-04T14:02:03.444Z",
       "phone": "+91 99999 11111",
       "customFlag": "developer_mode",
       "preferences": {
@@ -48,12 +48,12 @@
       "id": "USR-10004",
       "name": "Priya Patel",
       "email": "priya@example.com",
-      "passwordHash": "$2a$10$LLYnfGmoLkfKXfM.sylRWe9Y99q9TsV1S.70Q/Kmrgg3d.f8Aomlu",
+      "passwordHash": "$2a$10$5hY22RRvB.cCjKoUhnaRJ.5YdGFoB7Q3pUM7yfCPRfePOzIRN245K",
       "role": "customer",
       "status": "suspended",
-      "createdAt": "2026-08-12T18:11:20.047Z",
-      "updatedAt": "2026-09-21T18:11:20.046Z",
-      "lastLoginAt": "2026-09-11T18:11:20.047Z"
+      "createdAt": "2026-08-25T14:02:01.497Z",
+      "updatedAt": "2026-10-04T14:02:01.496Z",
+      "lastLoginAt": "2026-09-24T14:02:01.497Z"
     }
   ],
   "games": [
@@ -81,8 +81,8 @@
       "popular": true,
       "availability": "available",
       "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/730/header.jpg",
-      "createdAt": "2026-09-21T18:11:20.046Z",
-      "updatedAt": "2026-09-21T18:11:20.046Z"
+      "createdAt": "2026-10-04T14:02:01.496Z",
+      "updatedAt": "2026-10-04T14:02:01.496Z"
     },
     {
       "id": "GAME-10002",
@@ -108,8 +108,8 @@
       "popular": true,
       "availability": "available",
       "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/570/header.jpg",
-      "createdAt": "2026-09-21T18:11:20.046Z",
-      "updatedAt": "2026-09-21T18:11:20.046Z"
+      "createdAt": "2026-10-04T14:02:01.496Z",
+      "updatedAt": "2026-10-04T14:02:01.496Z"
     },
     {
       "id": "GAME-10003",
@@ -136,8 +136,8 @@
       "popular": true,
       "availability": "available",
       "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/578080/header.jpg",
-      "createdAt": "2026-09-21T18:11:20.046Z",
-      "updatedAt": "2026-09-21T18:11:20.046Z"
+      "createdAt": "2026-10-04T14:02:01.496Z",
+      "updatedAt": "2026-10-04T14:02:01.496Z"
     },
     {
       "id": "GAME-10004",
@@ -163,8 +163,8 @@
       "popular": true,
       "availability": "available",
       "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1172470/header.jpg",
-      "createdAt": "2026-09-21T18:11:20.046Z",
-      "updatedAt": "2026-09-21T18:11:20.046Z"
+      "createdAt": "2026-10-04T14:02:01.496Z",
+      "updatedAt": "2026-10-04T14:02:01.496Z"
     },
     {
       "id": "GAME-10005",
@@ -191,8 +191,8 @@
       "popular": true,
       "availability": "delisted",
       "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2767030/header.jpg",
-      "createdAt": "2026-09-21T18:11:20.046Z",
-      "updatedAt": "2026-09-21T18:11:20.046Z"
+      "createdAt": "2026-10-04T14:02:01.496Z",
+      "updatedAt": "2026-10-04T14:02:01.496Z"
     },
     {
       "id": "GAME-10006",
@@ -219,8 +219,8 @@
       "popular": true,
       "availability": "available",
       "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/252490/header.jpg",
-      "createdAt": "2026-09-21T18:11:20.046Z",
-      "updatedAt": "2026-09-21T18:11:20.046Z"
+      "createdAt": "2026-10-04T14:02:01.496Z",
+      "updatedAt": "2026-10-04T14:02:01.496Z"
     },
     {
       "id": "GAME-10007",
@@ -247,8 +247,8 @@
       "popular": true,
       "availability": "available",
       "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/271590/header.jpg",
-      "createdAt": "2026-09-21T18:11:20.046Z",
-      "updatedAt": "2026-09-21T18:11:20.046Z"
+      "createdAt": "2026-10-04T14:02:01.496Z",
+      "updatedAt": "2026-10-04T14:02:01.496Z"
     },
     {
       "id": "GAME-10008",
@@ -275,8 +275,8 @@
       "popular": true,
       "availability": "available",
       "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/413150/header.jpg",
-      "createdAt": "2026-09-21T18:11:20.046Z",
-      "updatedAt": "2026-09-21T18:11:20.046Z"
+      "createdAt": "2026-10-04T14:02:01.496Z",
+      "updatedAt": "2026-10-04T14:02:01.496Z"
     },
     {
       "id": "GAME-10009",
@@ -303,8 +303,8 @@
       "popular": true,
       "availability": "available",
       "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1086940/header.jpg",
-      "createdAt": "2026-09-21T18:11:20.046Z",
-      "updatedAt": "2026-09-21T18:11:20.046Z"
+      "createdAt": "2026-10-04T14:02:01.496Z",
+      "updatedAt": "2026-10-04T14:02:01.496Z"
     },
     {
       "id": "GAME-10010",
@@ -331,8 +331,8 @@
       "popular": true,
       "availability": "available",
       "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg",
-      "createdAt": "2026-09-21T18:11:20.046Z",
-      "updatedAt": "2026-09-21T18:11:20.046Z"
+      "createdAt": "2026-10-04T14:02:01.496Z",
+      "updatedAt": "2026-10-04T14:02:01.496Z"
     },
     {
       "id": "GAME-10011",
@@ -359,8 +359,8 @@
       "popular": true,
       "availability": "available",
       "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg",
-      "createdAt": "2026-09-21T18:11:20.046Z",
-      "updatedAt": "2026-09-21T18:11:20.046Z"
+      "createdAt": "2026-10-04T14:02:01.496Z",
+      "updatedAt": "2026-10-04T14:02:01.496Z"
     },
     {
       "id": "GAME-10012",
@@ -387,8 +387,8 @@
       "popular": true,
       "availability": "available",
       "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/292030/header.jpg",
-      "createdAt": "2026-09-21T18:11:20.046Z",
-      "updatedAt": "2026-09-21T18:11:20.046Z"
+      "createdAt": "2026-10-04T14:02:01.496Z",
+      "updatedAt": "2026-10-04T14:02:01.496Z"
     },
     {
       "id": "GAME-10013",
@@ -415,8 +415,8 @@
       "popular": true,
       "availability": "available",
       "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1174180/header.jpg",
-      "createdAt": "2026-09-21T18:11:20.046Z",
-      "updatedAt": "2026-09-21T18:11:20.046Z"
+      "createdAt": "2026-10-04T14:02:01.496Z",
+      "updatedAt": "2026-10-04T14:02:01.496Z"
     },
     {
       "id": "GAME-10014",
@@ -443,8 +443,8 @@
       "popular": true,
       "availability": "available",
       "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1551360/header.jpg",
-      "createdAt": "2026-09-21T18:11:20.046Z",
-      "updatedAt": "2026-09-21T18:11:20.046Z"
+      "createdAt": "2026-10-04T14:02:01.496Z",
+      "updatedAt": "2026-10-04T14:02:01.496Z"
     },
     {
       "id": "GAME-10015",
@@ -471,8 +471,8 @@
       "popular": true,
       "availability": "available",
       "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/2344520/header.jpg",
-      "createdAt": "2026-09-21T18:11:20.046Z",
-      "updatedAt": "2026-09-21T18:11:20.046Z"
+      "createdAt": "2026-10-04T14:02:01.496Z",
+      "updatedAt": "2026-10-04T14:02:01.496Z"
     },
     {
       "id": "GAME-10016",
@@ -499,8 +499,8 @@
       "popular": true,
       "availability": "available",
       "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1145360/header.jpg",
-      "createdAt": "2026-09-21T18:11:20.046Z",
-      "updatedAt": "2026-09-21T18:11:20.046Z"
+      "createdAt": "2026-10-04T14:02:01.496Z",
+      "updatedAt": "2026-10-04T14:02:01.496Z"
     },
     {
       "id": "GAME-10017",
@@ -527,8 +527,8 @@
       "popular": true,
       "availability": "available",
       "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/1145350/header.jpg",
-      "createdAt": "2026-09-21T18:11:20.046Z",
-      "updatedAt": "2026-09-21T18:11:20.046Z"
+      "createdAt": "2026-10-04T14:02:01.496Z",
+      "updatedAt": "2026-10-04T14:02:01.496Z"
     },
     {
       "id": "GAME-10018",
@@ -555,8 +555,8 @@
       "popular": true,
       "availability": "available",
       "image": "https://cdn.cloudflare.steamstatic.com/steam/apps/489830/header.jpg",
-      "createdAt": "2026-09-21T18:11:20.046Z",
-      "updatedAt": "2026-09-21T18:11:20.046Z"
+      "createdAt": "2026-10-04T14:02:01.496Z",
+      "updatedAt": "2026-10-04T14:02:01.496Z"
     }
   ],
   "categories": [
@@ -641,23 +641,23 @@
         {
           "gameId": "GAME-10013",
           "quantity": 3,
-          "addedAt": "2026-09-21T18:11:21.721Z",
+          "addedAt": "2026-10-04T14:02:03.687Z",
           "subtotalPaise": 316500
         }
       ],
-      "updatedAt": "2026-09-21T18:11:21.750Z"
+      "updatedAt": "2026-10-04T14:02:03.720Z"
     },
     {
       "id": "CART-10002",
       "userId": "USR-10002",
       "items": [],
-      "updatedAt": "2026-09-21T18:11:20.046Z"
+      "updatedAt": "2026-10-04T14:02:01.496Z"
     },
     {
-      "id": "cart_5ea91461-7256-4d73-ae28-716cba1c9c27",
+      "id": "cart_8c74aaa9-2638-4d5c-9c77-d62b5ad90c56",
       "userId": "USR-10003",
       "items": [],
-      "updatedAt": "2026-09-21T18:11:21.569Z"
+      "updatedAt": "2026-10-04T14:02:03.517Z"
     }
   ],
   "wishlists": [
@@ -669,7 +669,7 @@
         "GAME-10011",
         "GAME-10017"
       ],
-      "updatedAt": "2026-09-21T18:11:20.046Z"
+      "updatedAt": "2026-10-04T14:02:01.496Z"
     },
     {
       "id": "WISH-10002",
@@ -677,7 +677,7 @@
       "gameIds": [
         "GAME-10003"
       ],
-      "updatedAt": "2026-09-21T18:11:20.864Z"
+      "updatedAt": "2026-10-04T14:02:02.706Z"
     }
   ],
   "orders": [
@@ -691,7 +691,7 @@
       "currency": "INR",
       "status": "completed",
       "paymentId": "PAY-10001",
-      "createdAt": "2026-09-07T18:11:20.047Z"
+      "createdAt": "2026-09-20T14:02:01.497Z"
     },
     {
       "id": "ORD-10002",
@@ -703,7 +703,7 @@
       "currency": "INR",
       "status": "completed",
       "paymentId": "PAY-10002",
-      "createdAt": "2026-09-18T18:11:20.047Z"
+      "createdAt": "2026-10-01T14:02:01.497Z"
     },
     {
       "id": "ORD-10003",
@@ -715,10 +715,10 @@
       "currency": "INR",
       "status": "completed",
       "paymentId": "PAY-10003",
-      "createdAt": "2026-09-14T18:11:20.047Z"
+      "createdAt": "2026-09-27T14:02:01.497Z"
     },
     {
-      "id": "ORD_46f78e05-a4d5-44ca-8e4a-c138862c7e6b",
+      "id": "ORD_cbffcd61-f181-4e7f-90c6-c0db7f217920",
       "userId": "USR-10003",
       "subtotalPaise": 110000,
       "discountPaise": 11000,
@@ -726,12 +726,12 @@
       "totalPaise": 99000,
       "currency": "INR",
       "status": "completed",
-      "paymentId": "PAY_999bdb41-d6a1-4a44-add5-b47427643d9f",
-      "createdAt": "2026-09-21T18:11:21.398Z",
+      "paymentId": "PAY_704abbe2-63e8-4b5c-9811-afd2d100f9ee",
+      "createdAt": "2026-10-04T14:02:03.327Z",
       "promoCode": "WELCOME10"
     },
     {
-      "id": "ORD_7f2356ec-a6f9-43f9-9c9a-7721c6cae27d",
+      "id": "ORD_cf1139d4-76d0-4012-b739-5b1a4982fb66",
       "userId": "USR-10003",
       "subtotalPaise": 399900,
       "discountPaise": 199950,
@@ -739,8 +739,8 @@
       "totalPaise": 199950,
       "currency": "INR",
       "status": "completed",
-      "paymentId": "PAY_73e73ce0-2392-4ff9-b386-4f30504c70d0",
-      "createdAt": "2026-09-21T18:11:21.569Z"
+      "paymentId": "PAY_751a8724-0571-4b51-96d6-2e2e8729596a",
+      "createdAt": "2026-10-04T14:02:03.517Z"
     }
   ],
   "orderItems": [
@@ -769,16 +769,16 @@
       "quantity": 1
     },
     {
-      "id": "ITEM_1ac5f82c-5b8e-451a-930c-dd4f511eaa69",
-      "orderId": "ORD_46f78e05-a4d5-44ca-8e4a-c138862c7e6b",
+      "id": "ITEM_0b857eec-1aad-4787-a98a-22bdc881112c",
+      "orderId": "ORD_cbffcd61-f181-4e7f-90c6-c0db7f217920",
       "gameId": "GAME-10016",
       "titleSnapshot": "Hades",
       "pricePaise": 110000,
       "quantity": 1
     },
     {
-      "id": "ITEM_5a850bb6-801e-46ba-b16a-9bdf142f4f25",
-      "orderId": "ORD_7f2356ec-a6f9-43f9-9c9a-7721c6cae27d",
+      "id": "ITEM_30d572e1-21ba-43d6-ba46-d2116997b88a",
+      "orderId": "ORD_cf1139d4-76d0-4012-b739-5b1a4982fb66",
       "gameId": "GAME-10014",
       "titleSnapshot": "Forza Horizon 5",
       "pricePaise": 399900,
@@ -794,7 +794,7 @@
       "currency": "INR",
       "method": "simulated_card",
       "status": "completed",
-      "createdAt": "2026-09-07T18:11:20.047Z"
+      "createdAt": "2026-09-20T14:02:01.497Z"
     },
     {
       "id": "PAY-10002",
@@ -804,7 +804,7 @@
       "currency": "INR",
       "method": "simulated_upi",
       "status": "completed",
-      "createdAt": "2026-09-18T18:11:20.047Z"
+      "createdAt": "2026-10-01T14:02:01.497Z"
     },
     {
       "id": "PAY-10003",
@@ -814,27 +814,27 @@
       "currency": "INR",
       "method": "simulated_card",
       "status": "completed",
-      "createdAt": "2026-09-14T18:11:20.047Z"
+      "createdAt": "2026-09-27T14:02:01.497Z"
     },
     {
-      "id": "PAY_999bdb41-d6a1-4a44-add5-b47427643d9f",
-      "orderId": "ORD_46f78e05-a4d5-44ca-8e4a-c138862c7e6b",
+      "id": "PAY_704abbe2-63e8-4b5c-9811-afd2d100f9ee",
+      "orderId": "ORD_cbffcd61-f181-4e7f-90c6-c0db7f217920",
       "userId": "USR-10003",
       "amountPaise": 99000,
       "currency": "INR",
       "method": "simulated_card",
       "status": "completed",
-      "createdAt": "2026-09-21T18:11:21.398Z"
+      "createdAt": "2026-10-04T14:02:03.327Z"
     },
     {
-      "id": "PAY_73e73ce0-2392-4ff9-b386-4f30504c70d0",
-      "orderId": "ORD_7f2356ec-a6f9-43f9-9c9a-7721c6cae27d",
+      "id": "PAY_751a8724-0571-4b51-96d6-2e2e8729596a",
+      "orderId": "ORD_cf1139d4-76d0-4012-b739-5b1a4982fb66",
       "userId": "USR-10003",
       "amountPaise": 199950,
       "currency": "INR",
       "method": "simulated_card",
       "status": "completed",
-      "createdAt": "2026-09-21T18:11:21.569Z"
+      "createdAt": "2026-10-04T14:02:03.517Z"
     }
   ],
   "library": [
@@ -843,7 +843,7 @@
       "userId": "USR-10001",
       "gameId": "GAME-10010",
       "orderId": "ORD-10001",
-      "acquiredAt": "2026-09-07T18:11:20.047Z",
+      "acquiredAt": "2026-09-20T14:02:01.497Z",
       "status": "owned"
     },
     {
@@ -851,7 +851,7 @@
       "userId": "USR-10001",
       "gameId": "GAME-10012",
       "orderId": "ORD-10002",
-      "acquiredAt": "2026-09-18T18:11:20.047Z",
+      "acquiredAt": "2026-10-01T14:02:01.497Z",
       "status": "owned"
     },
     {
@@ -859,7 +859,7 @@
       "userId": "USR-10001",
       "gameId": "GAME-10001",
       "orderId": "ORD-10000",
-      "acquiredAt": "2026-08-27T18:11:20.047Z",
+      "acquiredAt": "2026-09-09T14:02:01.498Z",
       "status": "owned"
     },
     {
@@ -867,7 +867,7 @@
       "userId": "USR-10001",
       "gameId": "GAME-10008",
       "orderId": "ORD-10000",
-      "acquiredAt": "2026-09-01T18:11:20.047Z",
+      "acquiredAt": "2026-09-14T14:02:01.498Z",
       "status": "owned"
     },
     {
@@ -875,7 +875,7 @@
       "userId": "USR-10002",
       "gameId": "GAME-10011",
       "orderId": "ORD-10003",
-      "acquiredAt": "2026-09-14T18:11:20.047Z",
+      "acquiredAt": "2026-09-27T14:02:01.497Z",
       "status": "owned"
     },
     {
@@ -883,7 +883,7 @@
       "userId": "USR-10002",
       "gameId": "GAME-10010",
       "orderId": "ORD-10003",
-      "acquiredAt": "2026-09-14T18:11:20.047Z",
+      "acquiredAt": "2026-09-27T14:02:01.497Z",
       "status": "owned"
     },
     {
@@ -891,7 +891,7 @@
       "userId": "USR-10002",
       "gameId": "GAME-10001",
       "orderId": "ORD-10003",
-      "acquiredAt": "2026-09-14T18:11:20.047Z",
+      "acquiredAt": "2026-09-27T14:02:01.497Z",
       "status": "owned"
     },
     {
@@ -899,23 +899,23 @@
       "userId": "USR-10002",
       "gameId": "GAME-10014",
       "orderId": "ORD-10003",
-      "acquiredAt": "2026-09-14T18:11:20.047Z",
+      "acquiredAt": "2026-09-27T14:02:01.497Z",
       "status": "owned"
     },
     {
-      "id": "LIB_cdb00c7b-4ec9-4984-8617-0c31dd2cb1ca",
+      "id": "LIB_8d55b001-63f1-4023-b91d-2bae39250403",
       "userId": "USR-10003",
       "gameId": "GAME-10016",
-      "orderId": "ORD_46f78e05-a4d5-44ca-8e4a-c138862c7e6b",
-      "acquiredAt": "2026-09-21T18:11:21.398Z",
+      "orderId": "ORD_cbffcd61-f181-4e7f-90c6-c0db7f217920",
+      "acquiredAt": "2026-10-04T14:02:03.327Z",
       "status": "owned"
     },
     {
-      "id": "LIB_00361c9b-9389-43c4-b914-b77a67906c39",
+      "id": "LIB_47fbf140-48e0-4292-a98c-a6361bceb850",
       "userId": "USR-10003",
       "gameId": "GAME-10014",
-      "orderId": "ORD_7f2356ec-a6f9-43f9-9c9a-7721c6cae27d",
-      "acquiredAt": "2026-09-21T18:11:21.569Z",
+      "orderId": "ORD_cf1139d4-76d0-4012-b739-5b1a4982fb66",
+      "acquiredAt": "2026-10-04T14:02:03.517Z",
       "status": "owned"
     }
   ],
@@ -928,8 +928,8 @@
       "maxDiscountPaise": 100000,
       "minimumOrderPaise": 49900,
       "active": true,
-      "startsAt": "2026-08-22T18:11:20.047Z",
-      "endsAt": "2027-03-20T18:11:20.047Z",
+      "startsAt": "2026-09-04T14:02:01.497Z",
+      "endsAt": "2027-04-02T14:02:01.497Z",
       "usageLimit": 500,
       "usedCount": 15
     },
@@ -941,8 +941,8 @@
       "maxDiscountPaise": 500000,
       "minimumOrderPaise": 100000,
       "active": true,
-      "startsAt": "2026-09-11T18:11:20.047Z",
-      "endsAt": "2026-11-20T18:11:20.047Z",
+      "startsAt": "2026-09-24T14:02:01.497Z",
+      "endsAt": "2026-12-03T14:02:01.497Z",
       "usageLimit": 100,
       "usedCount": 8
     },
@@ -954,242 +954,242 @@
       "maxDiscountPaise": 50000,
       "minimumOrderPaise": 150000,
       "active": true,
-      "startsAt": "2026-09-16T18:11:20.047Z",
-      "endsAt": "2026-10-21T18:11:20.047Z",
+      "startsAt": "2026-09-29T14:02:01.497Z",
+      "endsAt": "2026-11-03T14:02:01.497Z",
       "usageLimit": 250,
       "usedCount": 22
     }
   ],
   "sessions": [
     {
-      "id": "SESSION-5642c808f3ad6db4e40cd9e1367f334726420435f9404d97162869ff861c412b",
+      "id": "SESSION-3782b67bba8e9ec2ebf5a1147fb9da4037916bed0ef2f9d5546f44d6d12c58b0",
       "userId": "USR-10001",
-      "createdAt": "2026-09-21T18:11:20.201Z",
-      "expiresAt": "2026-09-21T19:11:20.201Z",
-      "lastActivityAt": "2026-09-21T18:11:20.228Z"
+      "createdAt": "2026-10-04T14:02:01.901Z",
+      "expiresAt": "2026-10-04T15:02:01.901Z",
+      "lastActivityAt": "2026-10-04T14:02:01.931Z"
     },
     {
-      "id": "SESSION-a667a25945d6bdda20351b5a63804a009690c801a802054b36c9db7ce4decc64",
+      "id": "SESSION-629ab8d060c60da64e5a54e9b9b1979372a4edd4c23b5e6d53bb8ba76057799e",
       "userId": "USR-10002",
-      "createdAt": "2026-09-21T18:11:20.301Z",
-      "expiresAt": "2026-09-21T19:11:20.301Z",
-      "lastActivityAt": "2026-09-21T18:11:20.327Z"
+      "createdAt": "2026-10-04T14:02:02.018Z",
+      "expiresAt": "2026-10-04T15:02:02.018Z",
+      "lastActivityAt": "2026-10-04T14:02:02.048Z"
     },
     {
-      "id": "SESSION-d45d0fdb4141aac9bba1a94fda53ef1586e25354196b3c684c15fb9abcc40fa0",
+      "id": "SESSION-31e7caf70b37c4375696ffb127ba42aa04350bdc761ecaaa6b629bd723b1851d",
       "userId": "USR-10002",
-      "createdAt": "2026-09-21T18:11:20.402Z",
-      "expiresAt": "2026-09-21T19:11:20.402Z",
-      "lastActivityAt": "2026-09-21T18:11:20.493Z"
+      "createdAt": "2026-10-04T14:02:02.140Z",
+      "expiresAt": "2026-10-04T15:02:02.140Z",
+      "lastActivityAt": "2026-10-04T14:02:02.253Z"
     },
     {
-      "id": "SESSION-34b2c05ffdb2e095414cf271d64ac53244d7fe0d16b7c471c0aac40464344736",
+      "id": "SESSION-b73e819a41544fd1d8f75c574e30d90ac6e65749ec607829d33d452059483dfb",
       "userId": "USR-10001",
-      "createdAt": "2026-09-21T18:11:20.642Z",
-      "expiresAt": "2026-09-21T19:11:20.642Z",
-      "lastActivityAt": "2026-09-21T18:11:20.670Z"
+      "createdAt": "2026-10-04T14:02:02.450Z",
+      "expiresAt": "2026-10-04T15:02:02.450Z",
+      "lastActivityAt": "2026-10-04T14:02:02.484Z"
     },
     {
       "id": "mgs_sess_custom_test_token_123",
       "userId": "USR-10001",
-      "createdAt": "2026-09-21T18:11:20.742Z",
-      "lastActivityAt": "2026-09-21T18:11:20.742Z",
-      "expiresAt": "2026-09-28T18:11:20.742Z"
+      "createdAt": "2026-10-04T14:02:02.573Z",
+      "lastActivityAt": "2026-10-04T14:02:02.573Z",
+      "expiresAt": "2026-10-11T14:02:02.573Z"
     },
     {
-      "id": "SESSION-a1bb6933e224ce31e4ba1fe018b39467b7555b8d978d47bed9ded893236575ac",
+      "id": "SESSION-3c6470098c4a8d7149640afec91cea2e3ceb242888e4f48802d06939a1e853f4",
       "userId": "USR-10001",
-      "createdAt": "2026-09-21T18:11:20.832Z",
-      "expiresAt": "2026-09-21T19:11:20.832Z",
-      "lastActivityAt": "2026-09-21T18:11:20.859Z"
+      "createdAt": "2026-10-04T14:02:02.674Z",
+      "expiresAt": "2026-10-04T15:02:02.674Z",
+      "lastActivityAt": "2026-10-04T14:02:02.701Z"
     },
     {
-      "id": "SESSION-e88066de4e313b3860751af63b853eeea805a995a7ec81e53d4704442e957e2b",
+      "id": "SESSION-484e33dca6f043d3078ea56992c624a61d88ae84bbbc33e0917a3d604ecc13c2",
       "userId": "USR-10003",
-      "createdAt": "2026-09-21T18:11:20.946Z",
-      "expiresAt": "2026-09-21T19:11:20.946Z",
-      "lastActivityAt": "2026-09-21T18:11:20.969Z"
+      "createdAt": "2026-10-04T14:02:02.809Z",
+      "expiresAt": "2026-10-04T15:02:02.809Z",
+      "lastActivityAt": "2026-10-04T14:02:02.841Z"
     },
     {
-      "id": "SESSION-33acc8081a08dc40f346da167efd3da0bbe17c2f2d72fc4526c8a40ed96ad44e",
+      "id": "SESSION-5d89f18071044914e045b47eb618748a25b1f2737aad83c20bba178be97b3117",
       "userId": "USR-10003",
-      "createdAt": "2026-09-21T18:11:21.062Z",
-      "expiresAt": "2026-09-21T19:11:21.062Z",
-      "lastActivityAt": "2026-09-21T18:11:21.091Z"
+      "createdAt": "2026-10-04T14:02:02.952Z",
+      "expiresAt": "2026-10-04T15:02:02.952Z",
+      "lastActivityAt": "2026-10-04T14:02:02.981Z"
     },
     {
-      "id": "SESSION-db2984e838c57e85190e5ace12dbf0876892c8a0c7571fe4cd86dfa506c73142",
+      "id": "SESSION-375c49d6b51999935049d60671a13610dc28ec9d40862b3c4b24f86ca886a6c4",
       "userId": "USR-10003",
-      "createdAt": "2026-09-21T18:11:21.176Z",
-      "expiresAt": "2026-09-21T19:11:21.176Z",
-      "lastActivityAt": "2026-09-21T18:11:21.202Z"
+      "createdAt": "2026-10-04T14:02:03.084Z",
+      "expiresAt": "2026-10-04T15:02:03.084Z",
+      "lastActivityAt": "2026-10-04T14:02:03.110Z"
     },
     {
-      "id": "SESSION-d6157f7e0731e396e66b232e40b43ba1b628b38b322a8551f9d152e3ef2c1016",
+      "id": "SESSION-136ef7adbd6da321f71b68702953962480160d5d7919bc37b80a51f2e682c489",
       "userId": "USR-10003",
-      "createdAt": "2026-09-21T18:11:21.286Z",
-      "expiresAt": "2026-09-21T19:11:21.286Z",
-      "lastActivityAt": "2026-09-21T18:11:21.354Z"
+      "createdAt": "2026-10-04T14:02:03.220Z",
+      "expiresAt": "2026-10-04T15:02:03.220Z",
+      "lastActivityAt": "2026-10-04T14:02:03.292Z"
     },
     {
-      "id": "SESSION-f2dda38b34e5204f4eba4c707d323bc1308aeae4e62fd2038b1f5f196d2f6c83",
+      "id": "SESSION-8dd5de5d31ccaddb88ba53deb9ff36a8bb87b9ab85ada21a2cc30d5b01542057",
       "userId": "USR-10003",
-      "createdAt": "2026-09-21T18:11:21.491Z",
-      "expiresAt": "2026-09-21T19:11:21.491Z",
-      "lastActivityAt": "2026-09-21T18:11:21.559Z"
+      "createdAt": "2026-10-04T14:02:03.436Z",
+      "expiresAt": "2026-10-04T15:02:03.436Z",
+      "lastActivityAt": "2026-10-04T14:02:03.506Z"
     },
     {
-      "id": "SESSION-781b8c0e54c3b2cd1927d8dd6596554df1d89c290a3f763641dbcca3f9fb4653",
+      "id": "SESSION-be391fd89471caf7aece3ddf4687b1dfeb103980d7c0510a1150213de7c7472a",
       "userId": "USR-10001",
-      "createdAt": "2026-09-21T18:11:21.667Z",
-      "expiresAt": "2026-09-21T19:11:21.667Z",
-      "lastActivityAt": "2026-09-21T18:11:21.744Z"
+      "createdAt": "2026-10-04T14:02:03.633Z",
+      "expiresAt": "2026-10-04T15:02:03.633Z",
+      "lastActivityAt": "2026-10-04T14:02:03.715Z"
     }
   ],
   "auditLogs": [
     {
-      "id": "AUDIT-1790014281727-887",
+      "id": "AUDIT-1791122523691-511",
       "userId": "USR-10001",
       "action": "CART_ADD",
-      "timestamp": "2026-09-21T18:11:21.727Z",
+      "timestamp": "2026-10-04T14:02:03.691Z",
       "metadata": {
         "gameId": "GAME-10013",
         "title": "Red Dead Redemption 2"
       }
     },
     {
-      "id": "AUDIT-1790014281679-969",
+      "id": "AUDIT-1791122523646-830",
       "userId": "USR-10001",
       "action": "LOGIN",
-      "timestamp": "2026-09-21T18:11:21.679Z",
+      "timestamp": "2026-10-04T14:02:03.646Z",
       "metadata": {
         "ip": "127.0.0.1",
         "role": "customer"
       }
     },
     {
-      "id": "AUDIT-1790014281585-513",
+      "id": "AUDIT-1791122523534-777",
       "userId": "USR-10003",
       "action": "GAME_ACQUIRED",
-      "timestamp": "2026-09-21T18:11:21.585Z",
+      "timestamp": "2026-10-04T14:02:03.534Z",
       "metadata": {
         "gameId": "GAME-10014",
         "title": "Forza Horizon 5"
       }
     },
     {
-      "id": "AUDIT-1790014281580-104",
+      "id": "AUDIT-1791122523528-596",
       "userId": "USR-10003",
       "action": "PAYMENT_COMPLETED",
-      "timestamp": "2026-09-21T18:11:21.580Z",
+      "timestamp": "2026-10-04T14:02:03.528Z",
       "metadata": {
-        "paymentId": "PAY_73e73ce0-2392-4ff9-b386-4f30504c70d0",
+        "paymentId": "PAY_751a8724-0571-4b51-96d6-2e2e8729596a",
         "method": "simulated_card"
       }
     },
     {
-      "id": "AUDIT-1790014281574-84",
+      "id": "AUDIT-1791122523523-236",
       "userId": "USR-10003",
       "action": "ORDER_CREATED",
-      "timestamp": "2026-09-21T18:11:21.574Z",
+      "timestamp": "2026-10-04T14:02:03.523Z",
       "metadata": {
-        "orderId": "ORD_7f2356ec-a6f9-43f9-9c9a-7721c6cae27d",
+        "orderId": "ORD_cf1139d4-76d0-4012-b739-5b1a4982fb66",
         "totalPaise": 199950
       }
     },
     {
-      "id": "AUDIT-1790014281560-841",
+      "id": "AUDIT-1791122523507-702",
       "userId": "USR-10003",
       "action": "CHECKOUT_STARTED",
-      "timestamp": "2026-09-21T18:11:21.560Z",
+      "timestamp": "2026-10-04T14:02:03.507Z",
       "metadata": {
         "method": "simulated_card"
       }
     },
     {
-      "id": "AUDIT-1790014281544-478",
+      "id": "AUDIT-1791122523490-80",
       "userId": "USR-10003",
       "action": "CART_ADD",
-      "timestamp": "2026-09-21T18:11:21.544Z",
+      "timestamp": "2026-10-04T14:02:03.490Z",
       "metadata": {
         "gameId": "GAME-10014",
         "title": "Forza Horizon 5"
       }
     },
     {
-      "id": "AUDIT-1790014281503-988",
+      "id": "AUDIT-1791122523447-983",
       "userId": "USR-10003",
       "action": "LOGIN",
-      "timestamp": "2026-09-21T18:11:21.503Z",
+      "timestamp": "2026-10-04T14:02:03.447Z",
       "metadata": {
         "ip": "127.0.0.1",
         "role": "customer"
       }
     },
     {
-      "id": "AUDIT-1790014281415-246",
+      "id": "AUDIT-1791122523344-981",
       "userId": "USR-10003",
       "action": "GAME_ACQUIRED",
-      "timestamp": "2026-09-21T18:11:21.415Z",
+      "timestamp": "2026-10-04T14:02:03.344Z",
       "metadata": {
         "gameId": "GAME-10016",
         "title": "Hades"
       }
     },
     {
-      "id": "AUDIT-1790014281410-35",
+      "id": "AUDIT-1791122523337-369",
       "userId": "USR-10003",
       "action": "PAYMENT_COMPLETED",
-      "timestamp": "2026-09-21T18:11:21.410Z",
+      "timestamp": "2026-10-04T14:02:03.337Z",
       "metadata": {
-        "paymentId": "PAY_999bdb41-d6a1-4a44-add5-b47427643d9f",
+        "paymentId": "PAY_704abbe2-63e8-4b5c-9811-afd2d100f9ee",
         "method": "simulated_card"
       }
     },
     {
-      "id": "AUDIT-1790014281405-92",
+      "id": "AUDIT-1791122523332-361",
       "userId": "USR-10003",
       "action": "ORDER_CREATED",
-      "timestamp": "2026-09-21T18:11:21.405Z",
+      "timestamp": "2026-10-04T14:02:03.332Z",
       "metadata": {
-        "orderId": "ORD_46f78e05-a4d5-44ca-8e4a-c138862c7e6b",
+        "orderId": "ORD_cbffcd61-f181-4e7f-90c6-c0db7f217920",
         "totalPaise": 99000
       }
     },
     {
-      "id": "AUDIT-1790014281355-568",
+      "id": "AUDIT-1791122523293-347",
       "userId": "USR-10003",
       "action": "CHECKOUT_STARTED",
-      "timestamp": "2026-09-21T18:11:21.355Z",
+      "timestamp": "2026-10-04T14:02:03.293Z",
       "metadata": {
         "method": "simulated_card"
       }
     },
     {
-      "id": "AUDIT-1790014281340-503",
+      "id": "AUDIT-1791122523277-798",
       "userId": "USR-10003",
       "action": "CART_ADD",
-      "timestamp": "2026-09-21T18:11:21.340Z",
+      "timestamp": "2026-10-04T14:02:03.277Z",
       "metadata": {
         "gameId": "GAME-10016",
         "title": "Hades"
       }
     },
     {
-      "id": "AUDIT-1790014281298-529",
+      "id": "AUDIT-1791122523233-843",
       "userId": "USR-10003",
       "action": "LOGIN",
-      "timestamp": "2026-09-21T18:11:21.298Z",
+      "timestamp": "2026-10-04T14:02:03.233Z",
       "metadata": {
         "ip": "127.0.0.1",
         "role": "customer"
       }
     },
     {
-      "id": "AUDIT-1790014281211-102",
+      "id": "AUDIT-1791122523118-303",
       "userId": "USR-10003",
       "action": "PROFILE_UPDATE",
-      "timestamp": "2026-09-21T18:11:21.211Z",
+      "timestamp": "2026-10-04T14:02:03.118Z",
       "metadata": {
         "fields": [
           "preferences"
@@ -1197,40 +1197,40 @@
       }
     },
     {
-      "id": "AUDIT-1790014281188-30",
+      "id": "AUDIT-1791122523096-607",
       "userId": "USR-10003",
       "action": "LOGIN",
-      "timestamp": "2026-09-21T18:11:21.188Z",
+      "timestamp": "2026-10-04T14:02:03.096Z",
       "metadata": {
         "ip": "127.0.0.1",
         "role": "customer"
       }
     },
     {
-      "id": "AUDIT-1790014281100-607",
+      "id": "AUDIT-1791122522989-504",
       "userId": "USR-10003",
       "action": "CART_ADD",
-      "timestamp": "2026-09-21T18:11:21.100Z",
+      "timestamp": "2026-10-04T14:02:02.989Z",
       "metadata": {
         "gameId": "GAME-10005",
         "title": "Marvel Rivals"
       }
     },
     {
-      "id": "AUDIT-1790014281073-115",
+      "id": "AUDIT-1791122522965-644",
       "userId": "USR-10003",
       "action": "LOGIN",
-      "timestamp": "2026-09-21T18:11:21.074Z",
+      "timestamp": "2026-10-04T14:02:02.965Z",
       "metadata": {
         "ip": "127.0.0.1",
         "role": "customer"
       }
     },
     {
-      "id": "AUDIT-1790014280977-981",
+      "id": "AUDIT-1791122522850-103",
       "userId": "USR-10003",
       "action": "PROFILE_UPDATE",
-      "timestamp": "2026-09-21T18:11:20.977Z",
+      "timestamp": "2026-10-04T14:02:02.850Z",
       "metadata": {
         "fields": [
           "phone",
@@ -1239,79 +1239,79 @@
       }
     },
     {
-      "id": "AUDIT-1790014280955-654",
+      "id": "AUDIT-1791122522827-520",
       "userId": "USR-10003",
       "action": "LOGIN",
-      "timestamp": "2026-09-21T18:11:20.955Z",
+      "timestamp": "2026-10-04T14:02:02.827Z",
       "metadata": {
         "ip": "127.0.0.1",
         "role": "customer"
       }
     },
     {
-      "id": "AUDIT-1790014280868-804",
+      "id": "AUDIT-1791122522709-443",
       "userId": "USR-10002",
       "action": "WISHLIST_REMOVE",
-      "timestamp": "2026-09-21T18:11:20.868Z",
+      "timestamp": "2026-10-04T14:02:02.709Z",
       "metadata": {
         "gameId": "GAME-10006"
       }
     },
     {
-      "id": "AUDIT-1790014280842-495",
+      "id": "AUDIT-1791122522686-448",
       "userId": "USR-10001",
       "action": "LOGIN",
-      "timestamp": "2026-09-21T18:11:20.842Z",
+      "timestamp": "2026-10-04T14:02:02.686Z",
       "metadata": {
         "ip": "127.0.0.1",
         "role": "customer"
       }
     },
     {
-      "id": "AUDIT-1790014280752-776",
+      "id": "AUDIT-1791122522585-851",
       "userId": "USR-10001",
       "action": "LOGIN",
-      "timestamp": "2026-09-21T18:11:20.752Z",
+      "timestamp": "2026-10-04T14:02:02.585Z",
       "metadata": {
         "ip": "127.0.0.1",
         "role": "customer"
       }
     },
     {
-      "id": "AUDIT-1790014280654-937",
+      "id": "AUDIT-1791122522467-386",
       "userId": "USR-10001",
       "action": "LOGIN",
-      "timestamp": "2026-09-21T18:11:20.654Z",
+      "timestamp": "2026-10-04T14:02:02.467Z",
       "metadata": {
         "ip": "127.0.0.1",
         "role": "customer"
       }
     },
     {
-      "id": "AUDIT-1790014280413-601",
+      "id": "AUDIT-1791122522151-459",
       "userId": "USR-10002",
       "action": "LOGIN",
-      "timestamp": "2026-09-21T18:11:20.413Z",
+      "timestamp": "2026-10-04T14:02:02.151Z",
       "metadata": {
         "ip": "127.0.0.1",
         "role": "admin"
       }
     },
     {
-      "id": "AUDIT-1790014280311-641",
+      "id": "AUDIT-1791122522030-140",
       "userId": "USR-10002",
       "action": "LOGIN",
-      "timestamp": "2026-09-21T18:11:20.311Z",
+      "timestamp": "2026-10-04T14:02:02.030Z",
       "metadata": {
         "ip": "127.0.0.1",
         "role": "admin"
       }
     },
     {
-      "id": "AUDIT-1790014280211-858",
+      "id": "AUDIT-1791122521914-331",
       "userId": "USR-10001",
       "action": "LOGIN",
-      "timestamp": "2026-09-21T18:11:20.211Z",
+      "timestamp": "2026-10-04T14:02:01.914Z",
       "metadata": {
         "ip": "127.0.0.1",
         "role": "customer"
@@ -1321,7 +1321,7 @@
       "id": "AUDIT-10001",
       "userId": "USR-10002",
       "action": "LOGIN",
-      "timestamp": "2026-09-21T17:11:20.047Z",
+      "timestamp": "2026-10-04T13:02:01.498Z",
       "metadata": {
         "role": "admin",
         "ip": "127.0.0.1"
@@ -1331,7 +1331,7 @@
       "id": "AUDIT-10002",
       "userId": "USR-10001",
       "action": "ORDER_CREATED",
-      "timestamp": "2026-09-18T18:11:20.047Z",
+      "timestamp": "2026-10-01T14:02:01.497Z",
       "metadata": {
         "orderId": "ORD-10002",
         "totalPaise": 49900
@@ -1341,7 +1341,7 @@
       "id": "AUDIT-10003",
       "userId": "USR-10001",
       "action": "PAYMENT_COMPLETED",
-      "timestamp": "2026-09-18T18:11:20.047Z",
+      "timestamp": "2026-10-01T14:02:01.497Z",
       "metadata": {
         "paymentId": "PAY-10002",
         "method": "simulated_upi"
@@ -1351,7 +1351,7 @@
       "id": "AUDIT-10004",
       "userId": "USR-10002",
       "action": "PROMOTION_CREATED",
-      "timestamp": "2026-09-11T18:11:20.047Z",
+      "timestamp": "2026-09-24T14:02:01.498Z",
       "metadata": {
         "promoCode": "GAMER20"
       }
@@ -1361,7 +1361,7 @@
     "appName": "AMR Game Space",
     "version": "1.0.0",
     "mode": "simulator",
-    "seededAt": "2026-09-21T18:11:20.046Z",
-    "lastUpdated": "2026-09-21T18:11:21.750Z"
+    "seededAt": "2026-10-04T14:02:01.496Z",
+    "lastUpdated": "2026-10-04T14:02:03.720Z"
   }
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Gamepad2, Mail, Lock, LogIn, ShieldCheck, UserCheck } from 'lucide-react';
+import { Gamepad2, Mail, Lock, LogIn } from 'lucide-react';
 import { useAuth } from '../context/AuthContext.js';
 import { useToast } from '../context/ToastContext.js';
 import { GlassCard } from '../components/glass/GlassCard.js';
@@ -29,20 +29,6 @@ export const LoginPage: React.FC = () => {
     }
   };
 
-  const handleDemoLogin = async (demoEmail: string, demoPass: string) => {
-    setEmail(demoEmail);
-    setPassword(demoPass);
-    try {
-      setLoading(true);
-      await login(demoEmail, demoPass);
-      navigate('/');
-    } catch (err: any) {
-      showToast(err.message || 'Demo login failed.', 'error');
-    } finally {
-      setLoading(false);
-    }
-  };
-
   return (
     <div className="max-w-md mx-auto px-4 py-16">
       <GlassCard variant="strong" glow="violet" className="p-8 space-y-6">
@@ -56,36 +42,11 @@ export const LoginPage: React.FC = () => {
           <p className="text-xs text-slate-400">Access your digital game storefront & collection</p>
         </div>
 
-        {/* Quick Demo Login Buttons */}
-        <div className="p-3 rounded-xl bg-slate-900/80 border border-slate-800 space-y-2">
-          <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block text-center">
-            Quick Demo Accounts
-          </span>
-          <div className="grid grid-cols-2 gap-2">
-            <button
-              type="button"
-              onClick={() => handleDemoLogin('gamer@amrgamespace.local', 'Gamer@12345')}
-              className="px-2.5 py-1.5 rounded-lg bg-cyan-500/20 hover:bg-cyan-500/30 border border-cyan-500/40 text-cyan-300 text-xs font-bold transition-all flex items-center justify-center gap-1"
-            >
-              <UserCheck className="w-3.5 h-3.5" />
-              <span>Customer Demo</span>
-            </button>
-            <button
-              type="button"
-              onClick={() => handleDemoLogin('admin@amrgamespace.local', 'Admin@Sec9#Vault2026!')}
-              className="px-2.5 py-1.5 rounded-lg bg-violet-500/20 hover:bg-violet-500/30 border border-violet-500/40 text-violet-300 text-xs font-bold transition-all flex items-center justify-center gap-1"
-            >
-              <ShieldCheck className="w-3.5 h-3.5" />
-              <span>Admin Demo</span>
-            </button>
-          </div>
-        </div>
-
         <form onSubmit={handleSubmit} className="space-y-4">
           <GlassInput
             label="Email Address"
             type="email"
-            placeholder="gamer@amrgamespace.local"
+            placeholder="you@example.com"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             icon={<Mail className="w-4 h-4 text-slate-400" />}
